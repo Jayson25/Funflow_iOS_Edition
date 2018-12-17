@@ -24,6 +24,7 @@ final class CategoryCollectionViewController: UICollectionViewController {
         // Do any additional setup after loading the view.
     }
 
+    
     /*
     // MARK: - Navigation
 
