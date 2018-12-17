@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA5BA0363FAB82656CD6AA78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA5BA0C628568F99EE13AF43 /* LaunchScreen.storyboard */; };
+		AA5BA533F5D93DF1F41F65B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA5BAFBFDB3DFE18BEE1EEAD /* Assets.xcassets */; };
+		AA5BA62E8AFC8C97AF79EEC4 /* FunflowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BA09C8D5CB153414E2AAB /* FunflowTests.swift */; };
+		AA5BA63E968FED8569148857 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BA7FADB0938E866022612 /* AppDelegate.swift */; };
+		AA5BA84CF04DA4A55DDB027E /* FunflowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BABDDE699BEB21E4D161B /* FunflowUITests.swift */; };
+		AA5BACEABE2F8EFFFE7928C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA5BAD8BA6A3E31CBA331EB1 /* Main.storyboard */; };
+		ED38F50021BFE61100677F24 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED38F4FF21BFE61100677F24 /* CategoryCell.swift */; };
+		ED38F50621C002CE00677F24 /* ConfigurationParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED38F50521C002CE00677F24 /* ConfigurationParam.swift */; };
+		ED38F50821C003EC00677F24 /* ListOfCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED38F50721C003EC00677F24 /* ListOfCards.swift */; };
+		ED38F50A21C004AC00677F24 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED38F50921C004AC00677F24 /* CardCell.swift */; };
+		ED38F51421C3B6A300677F24 /* buttonLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED38F51321C3B6A300677F24 /* buttonLayout.swift */; };
+		ED66B9D521B964A6004551B0 /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED66B9D421B964A6004551B0 /* AddCardViewController.swift */; };
+		EDFF00EB21BE9B5D00CD9AED /* CategoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF00EA21BE9B5D00CD9AED /* CategoryCollectionViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA5BA072B3981DDD56DBBE5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA5BAA18BE2B766584897AB3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA5BA3B34A4DE3B46355AB2B;
+			remoteInfo = Funflow;
+		};
+		AA5BA74E675D359C18521EFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA5BAA18BE2B766584897AB3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA5BA3B34A4DE3B46355AB2B;
+			remoteInfo = Funflow;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AA5BA09C8D5CB153414E2AAB /* FunflowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunflowTests.swift; sourceTree = "<group>"; };
+		AA5BA13E43D0862A75AEA5A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		AA5BA2CA1D9083095049A139 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AA5BA64951462A7763813002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		AA5BA74AD037FD757121CB3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AA5BA7FADB0938E866022612 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AA5BAAB8BC704D9677ABF80C /* FunflowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunflowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA5BABDDE699BEB21E4D161B /* FunflowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunflowUITests.swift; sourceTree = "<group>"; };
+		AA5BAC20E5766D1DA81E034B /* FunflowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunflowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA5BAC35A0A858BF2D3B6FAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		AA5BAF6E636B5689046F30C9 /* Funflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Funflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA5BAFBFDB3DFE18BEE1EEAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED38F4FF21BFE61100677F24 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		ED38F50521C002CE00677F24 /* ConfigurationParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationParam.swift; sourceTree = "<group>"; };
+		ED38F50721C003EC00677F24 /* ListOfCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfCards.swift; sourceTree = "<group>"; };
+		ED38F50921C004AC00677F24 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		ED38F51321C3B6A300677F24 /* buttonLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonLayout.swift; sourceTree = "<group>"; };
+		ED66B9D421B964A6004551B0 /* AddCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
+		EDFF00EA21BE9B5D00CD9AED /* CategoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA5BA633614C7D6A23120067 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA5BAE3153C5FE9419F37051 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA5BAE4808581F22F8E7E9DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA5BA25043EFCB8F7012FD1D /* Funflow */ = {
+			isa = PBXGroup;
+			children = (
+				ED38F50C21C004D600677F24 /* viewControllers */,
+				ED38F50B21C004BB00677F24 /* cellParameters */,
+				AA5BA13E43D0862A75AEA5A3 /* Info.plist */,
+				AA5BAFBFDB3DFE18BEE1EEAD /* Assets.xcassets */,
+				AA5BA0C628568F99EE13AF43 /* LaunchScreen.storyboard */,
+				AA5BA7FADB0938E866022612 /* AppDelegate.swift */,
+				AA5BAD8BA6A3E31CBA331EB1 /* Main.storyboard */,
+				ED38F50521C002CE00677F24 /* ConfigurationParam.swift */,
+				ED38F51321C3B6A300677F24 /* buttonLayout.swift */,
+			);
+			path = Funflow;
+			sourceTree = "<group>";
+		};
+		AA5BA614C835DCA42F923BFE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA5BAF6E636B5689046F30C9 /* Funflow.app */,
+				AA5BAAB8BC704D9677ABF80C /* FunflowTests.xctest */,
+				AA5BAC20E5766D1DA81E034B /* FunflowUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA5BA62E60778933676D1FE8 /* FunflowUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AA5BA64951462A7763813002 /* Info.plist */,
+				AA5BABDDE699BEB21E4D161B /* FunflowUITests.swift */,
+			);
+			path = FunflowUITests;
+			sourceTree = "<group>";
+		};
+		AA5BA7C500B03864B07FD1D1 = {
+			isa = PBXGroup;
+			children = (
+				AA5BA614C835DCA42F923BFE /* Products */,
+				AA5BA25043EFCB8F7012FD1D /* Funflow */,
+				AA5BAC519A834D7C75E67290 /* FunflowTests */,
+				AA5BA62E60778933676D1FE8 /* FunflowUITests */,
+			);
+			sourceTree = "<group>";
+		};
+		AA5BAC519A834D7C75E67290 /* FunflowTests */ = {
+			isa = PBXGroup;
+			children = (
+				AA5BAC35A0A858BF2D3B6FAF /* Info.plist */,
+				AA5BA09C8D5CB153414E2AAB /* FunflowTests.swift */,
+			);
+			path = FunflowTests;
+			sourceTree = "<group>";
+		};
+		ED38F50B21C004BB00677F24 /* cellParameters */ = {
+			isa = PBXGroup;
+			children = (
+				ED38F50921C004AC00677F24 /* CardCell.swift */,
+				ED38F4FF21BFE61100677F24 /* CategoryCell.swift */,
+			);
+			path = cellParameters;
+			sourceTree = "<group>";
+		};
+		ED38F50C21C004D600677F24 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EDFF00EA21BE9B5D00CD9AED /* CategoryCollectionViewController.swift */,
+				ED66B9D421B964A6004551B0 /* AddCardViewController.swift */,
+				ED38F50721C003EC00677F24 /* ListOfCards.swift */,
+			);
+			path = viewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA5BA21510B5F071025E4DB2 /* FunflowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA5BADB8F49A7944B75D3B3E /* Build configuration list for PBXNativeTarget "FunflowTests" */;
+			buildPhases = (
+				AA5BA6543BD6CFD7D45C11FA /* Sources */,
+				AA5BA633614C7D6A23120067 /* Frameworks */,
+				AA5BACC93FC3B9EDBDB0DA2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA5BAAD89DC225045F3F76A8 /* PBXTargetDependency */,
+			);
+			name = FunflowTests;
+			productName = FunflowTests;
+			productReference = AA5BAAB8BC704D9677ABF80C /* FunflowTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AA5BA3B34A4DE3B46355AB2B /* Funflow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA5BA94E3F6220DBECF45A3B /* Build configuration list for PBXNativeTarget "Funflow" */;
+			buildPhases = (
+				AA5BA5B45EF4CB5EE4699B89 /* Sources */,
+				AA5BAE4808581F22F8E7E9DD /* Frameworks */,
+				AA5BAC79F309DA6017E301FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Funflow;
+			productName = Funflow;
+			productReference = AA5BAF6E636B5689046F30C9 /* Funflow.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AA5BAF0647D270FB92787B9B /* FunflowUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA5BA15FC0062A6153A1926D /* Build configuration list for PBXNativeTarget "FunflowUITests" */;
+			buildPhases = (
+				AA5BA8BC8164160F86452E96 /* Sources */,
+				AA5BAE3153C5FE9419F37051 /* Frameworks */,
+				AA5BAD6B7227A569C5414699 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA5BA23459B96219A9918BA5 /* PBXTargetDependency */,
+			);
+			name = FunflowUITests;
+			productName = FunflowUITests;
+			productReference = AA5BAC20E5766D1DA81E034B /* FunflowUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA5BAA18BE2B766584897AB3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = utt;
+				TargetAttributes = {
+					AA5BA3B34A4DE3B46355AB2B = {
+						DevelopmentTeam = A88WMF7X92;
+					};
+				};
+			};
+			buildConfigurationList = AA5BAA19BB1A4FA01B8C7CD7 /* Build configuration list for PBXProject "Funflow" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AA5BA7C500B03864B07FD1D1;
+			productRefGroup = AA5BA614C835DCA42F923BFE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA5BA3B34A4DE3B46355AB2B /* Funflow */,
+				AA5BA21510B5F071025E4DB2 /* FunflowTests */,
+				AA5BAF0647D270FB92787B9B /* FunflowUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA5BAC79F309DA6017E301FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA5BA533F5D93DF1F41F65B8 /* Assets.xcassets in Resources */,
+				AA5BA0363FAB82656CD6AA78 /* LaunchScreen.storyboard in Resources */,
+				AA5BACEABE2F8EFFFE7928C1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA5BACC93FC3B9EDBDB0DA2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA5BAD6B7227A569C5414699 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA5BA5B45EF4CB5EE4699B89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED38F50A21C004AC00677F24 /* CardCell.swift in Sources */,
+				AA5BA63E968FED8569148857 /* AppDelegate.swift in Sources */,
+				ED66B9D521B964A6004551B0 /* AddCardViewController.swift in Sources */,
+				ED38F50821C003EC00677F24 /* ListOfCards.swift in Sources */,
+				ED38F50621C002CE00677F24 /* ConfigurationParam.swift in Sources */,
+				EDFF00EB21BE9B5D00CD9AED /* CategoryCollectionViewController.swift in Sources */,
+				ED38F50021BFE61100677F24 /* CategoryCell.swift in Sources */,
+				ED38F51421C3B6A300677F24 /* buttonLayout.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA5BA6543BD6CFD7D45C11FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA5BA62E8AFC8C97AF79EEC4 /* FunflowTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA5BA8BC8164160F86452E96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA5BA84CF04DA4A55DDB027E /* FunflowUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA5BA23459B96219A9918BA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA5BA3B34A4DE3B46355AB2B /* Funflow */;
+			targetProxy = AA5BA74E675D359C18521EFD /* PBXContainerItemProxy */;
+		};
+		AA5BAAD89DC225045F3F76A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA5BA3B34A4DE3B46355AB2B /* Funflow */;
+			targetProxy = AA5BA072B3981DDD56DBBE5D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AA5BA0C628568F99EE13AF43 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA5BA74AD037FD757121CB3C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		AA5BAD8BA6A3E31CBA331EB1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA5BA2CA1D9083095049A139 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AA5BA5ECD6470B787FCBE83C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FunflowUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.utt.if26.FunflowUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Funflow;
+			};
+			name = Release;
+		};
+		AA5BA67C03586E9C3DA48AF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA5BA7EBDDE188122B2DDA0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Funflow.app/Funflow";
+				INFOPLIST_FILE = FunflowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.utt.if26.FunflowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+		AA5BA857FA3A16DC4CE1EC7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A88WMF7X92;
+				INFOPLIST_FILE = Funflow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.utt.if26.Funflow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AA5BAAAC995FABDD0B2AE8B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AA5BAB011F6FE052FAC15EBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FunflowUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.utt.if26.FunflowUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Funflow;
+			};
+			name = Debug;
+		};
+		AA5BAD2DE05AD097F16CC457 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Funflow.app/Funflow";
+				INFOPLIST_FILE = FunflowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.utt.if26.FunflowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		AA5BAD97D9CE91EFCA9484F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A88WMF7X92;
+				INFOPLIST_FILE = Funflow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.utt.if26.Funflow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA5BA15FC0062A6153A1926D /* Build configuration list for PBXNativeTarget "FunflowUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA5BAB011F6FE052FAC15EBA /* Debug */,
+				AA5BA5ECD6470B787FCBE83C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA5BA94E3F6220DBECF45A3B /* Build configuration list for PBXNativeTarget "Funflow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA5BAD97D9CE91EFCA9484F6 /* Debug */,
+				AA5BA857FA3A16DC4CE1EC7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA5BAA19BB1A4FA01B8C7CD7 /* Build configuration list for PBXProject "Funflow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA5BAAAC995FABDD0B2AE8B5 /* Debug */,
+				AA5BA67C03586E9C3DA48AF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA5BADB8F49A7944B75D3B3E /* Build configuration list for PBXNativeTarget "FunflowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA5BAD2DE05AD097F16CC457 /* Debug */,
+				AA5BA7EBDDE188122B2DDA0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA5BAA18BE2B766584897AB3 /* Project object */;
+}
