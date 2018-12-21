@@ -55,7 +55,7 @@ final class CategoryCollectionViewController: UICollectionViewController {
         cell.layer.masksToBounds = true
         cell.layer.cornerRadius = ConfigurationParam.roundedCorners
         cell.backgroundColor = UIColor.white
-        cell.categoryIcon.image =  #imageLiteral(resourceName: "nc_test")
+        cell.categoryIcon.image =  #imageLiteral(resourceName: "anime_manga")
         cell.buttonZone.tag = indexPath.row
     
         return cell

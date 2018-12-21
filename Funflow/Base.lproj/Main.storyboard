@@ -121,6 +121,9 @@
                                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="cancelFormAction:" destination="Ad5-3G-TBW" eventType="touchUpInside" id="O1r-pE-BzS"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xn-j9-2sL">
                                                 <rect key="frame" x="247" y="848" width="120" height="80"/>
@@ -130,6 +133,9 @@
                                                     <color key="titleColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="saveFlowAction:" destination="Ad5-3G-TBW" eventType="touchUpInside" id="sWQ-Jh-39s"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add new flow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wej-l0-t9x">
                                                 <rect key="frame" x="331.5" y="38" width="171.5" height="41"/>
@@ -196,6 +202,7 @@
                         <outlet property="releaseDateFieldLabel" destination="Qqk-mV-EQh" id="ta1-Yy-taV"/>
                         <outlet property="saveButton" destination="9Xn-j9-2sL" id="Gc0-Lx-q8y"/>
                         <outlet property="scrollFieldForm" destination="uKC-mE-CvD" id="Xf0-bl-89p"/>
+                        <outlet property="titleField" destination="dkR-hq-s5B" id="fEV-GP-KzJ"/>
                         <outlet property="titleFieldLabel" destination="Gqh-2v-hFb" id="4at-9Q-fXs"/>
                     </connections>
                 </viewController>
@@ -292,7 +299,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="90" id="Tv1-rB-idi" customClass="CardCell" customModule="Funflow" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cardCell" rowHeight="90" id="Tv1-rB-idi" customClass="CardCell" customModule="Funflow" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="834" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tv1-rB-idi" id="l4N-cr-aiM">

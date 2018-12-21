@@ -10,6 +10,8 @@ import UIKit
 
 class CardCell: UITableViewCell {
     
+    private var cardID : Int!
+    
     @IBOutlet weak var logoCard: UIImageView!
     @IBOutlet weak var labelView: UILabel!
     
@@ -23,5 +25,8 @@ class CardCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    func assignCardIDOnCell(id : Int){
+        self.cardID = id
+    }
 }
