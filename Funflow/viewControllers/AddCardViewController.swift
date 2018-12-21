@@ -20,6 +20,7 @@ class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var authorFieldLabel: UILabel!
     @IBOutlet weak var releaseDateFieldLabel: UILabel!
     @IBOutlet weak var descriptionFieldLabel: UILabel!
+    @IBOutlet weak var RatingEditLabel: UILabel!
     
     @IBOutlet weak var scrollFieldForm: UIScrollView!
     
@@ -34,6 +35,8 @@ class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var descriptionAreaEdit: UITextView!
     
     @IBOutlet weak var formContentView: UIView!
+    
+    @IBOutlet weak var starRatingEdit: CosmosView!
     
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
@@ -64,9 +67,17 @@ class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         authorFieldLabel.textColor = ConfigurationParam.fontColor
         releaseDateFieldLabel.textColor = ConfigurationParam.fontColor
         descriptionFieldLabel.textColor = ConfigurationParam.fontColor
+        RatingEditLabel.textColor = ConfigurationParam.fontColor
         
         let date = Date()
         releaseDateField.text = dateFormatter.string(from: date)
+        
+        starRatingEdit.backgroundColor = ConfigurationParam.backgroundColor
+        starRatingEdit.settings.updateOnTouch = true
+        starRatingEdit.starSize = 32
+        starRatingEdit.settings.fillMode = .full
+        starRatingEdit.settings.starMargin = 10
+        starRatingEdit.rating = 0
     }
     
     @IBAction func releaseDateEditing(_ sender: UITextField) {
@@ -102,6 +113,7 @@ class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         let releaseDate : String = releaseDateField.text!
         let description : String = descriptionAreaEdit.text!
         var image : String!
+        let rating : Int = Int(starRatingEdit.rating)
         
         /**save Image to folder app system
         */
@@ -205,6 +217,7 @@ class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         categoryField.text = ""
         authorField.text = ""
         descriptionAreaEdit.text = ""
+        starRatingEdit.rating = 0
     }
 }
 

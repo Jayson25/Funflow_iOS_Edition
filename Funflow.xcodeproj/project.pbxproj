@@ -18,6 +18,12 @@
 		ED38F50821C003EC00677F24 /* ListOfCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED38F50721C003EC00677F24 /* ListOfCards.swift */; };
 		ED38F50A21C004AC00677F24 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED38F50921C004AC00677F24 /* CardCell.swift */; };
 		ED38F51421C3B6A300677F24 /* buttonLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED38F51321C3B6A300677F24 /* buttonLayout.swift */; };
+		ED5DAC6721CD842C002E0FD1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DAC6621CD842C002E0FD1 /* Category.swift */; };
+		ED5DAC6921CD86E2002E0FD1 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DAC6821CD86E2002E0FD1 /* Task.swift */; };
+		ED5DAC6B21CD8958002E0FD1 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DAC6A21CD8958002E0FD1 /* Flow.swift */; };
+		ED5DAC6D21CD8CD3002E0FD1 /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DAC6C21CD8CD3002E0FD1 /* CosmosDistrib.swift */; };
+		ED5DAC6E21CD8CD3002E0FD1 /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DAC6C21CD8CD3002E0FD1 /* CosmosDistrib.swift */; };
+		ED5DAC6F21CD8CD3002E0FD1 /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DAC6C21CD8CD3002E0FD1 /* CosmosDistrib.swift */; };
 		ED66B9D521B964A6004551B0 /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED66B9D421B964A6004551B0 /* AddCardViewController.swift */; };
 		EDFF00EB21BE9B5D00CD9AED /* CategoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF00EA21BE9B5D00CD9AED /* CategoryCollectionViewController.swift */; };
 /* End PBXBuildFile section */
@@ -57,6 +63,10 @@
 		ED38F50721C003EC00677F24 /* ListOfCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfCards.swift; sourceTree = "<group>"; };
 		ED38F50921C004AC00677F24 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		ED38F51321C3B6A300677F24 /* buttonLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonLayout.swift; sourceTree = "<group>"; };
+		ED5DAC6621CD842C002E0FD1 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		ED5DAC6821CD86E2002E0FD1 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		ED5DAC6A21CD8958002E0FD1 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
+		ED5DAC6C21CD8CD3002E0FD1 /* CosmosDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CosmosDistrib.swift; path = "../../../Downloads/Cosmos-master/Distrib/CosmosDistrib.swift"; sourceTree = "<group>"; };
 		ED66B9D421B964A6004551B0 /* AddCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
 		EDFF00EA21BE9B5D00CD9AED /* CategoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,12 +99,14 @@
 		AA5BA25043EFCB8F7012FD1D /* Funflow */ = {
 			isa = PBXGroup;
 			children = (
+				ED5DAC6421CD83F7002E0FD1 /* database */,
 				ED38F50C21C004D600677F24 /* viewControllers */,
 				ED38F50B21C004BB00677F24 /* cellParameters */,
 				AA5BA13E43D0862A75AEA5A3 /* Info.plist */,
 				AA5BAFBFDB3DFE18BEE1EEAD /* Assets.xcassets */,
 				AA5BA0C628568F99EE13AF43 /* LaunchScreen.storyboard */,
 				AA5BA7FADB0938E866022612 /* AppDelegate.swift */,
+				ED5DAC6C21CD8CD3002E0FD1 /* CosmosDistrib.swift */,
 				AA5BAD8BA6A3E31CBA331EB1 /* Main.storyboard */,
 				ED38F50521C002CE00677F24 /* ConfigurationParam.swift */,
 				ED38F51321C3B6A300677F24 /* buttonLayout.swift */,
@@ -157,6 +169,24 @@
 				ED38F50721C003EC00677F24 /* ListOfCards.swift */,
 			);
 			path = viewControllers;
+			sourceTree = "<group>";
+		};
+		ED5DAC6421CD83F7002E0FD1 /* database */ = {
+			isa = PBXGroup;
+			children = (
+				ED5DAC6521CD8411002E0FD1 /* dbObjects */,
+			);
+			path = database;
+			sourceTree = "<group>";
+		};
+		ED5DAC6521CD8411002E0FD1 /* dbObjects */ = {
+			isa = PBXGroup;
+			children = (
+				ED5DAC6621CD842C002E0FD1 /* Category.swift */,
+				ED5DAC6821CD86E2002E0FD1 /* Task.swift */,
+				ED5DAC6A21CD8958002E0FD1 /* Flow.swift */,
+			);
+			path = dbObjects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,12 +312,16 @@
 			files = (
 				ED38F50A21C004AC00677F24 /* CardCell.swift in Sources */,
 				AA5BA63E968FED8569148857 /* AppDelegate.swift in Sources */,
+				ED5DAC6921CD86E2002E0FD1 /* Task.swift in Sources */,
 				ED66B9D521B964A6004551B0 /* AddCardViewController.swift in Sources */,
 				ED38F50821C003EC00677F24 /* ListOfCards.swift in Sources */,
 				ED38F50621C002CE00677F24 /* ConfigurationParam.swift in Sources */,
+				ED5DAC6721CD842C002E0FD1 /* Category.swift in Sources */,
+				ED5DAC6B21CD8958002E0FD1 /* Flow.swift in Sources */,
 				EDFF00EB21BE9B5D00CD9AED /* CategoryCollectionViewController.swift in Sources */,
 				ED38F50021BFE61100677F24 /* CategoryCell.swift in Sources */,
 				ED38F51421C3B6A300677F24 /* buttonLayout.swift in Sources */,
+				ED5DAC6D21CD8CD3002E0FD1 /* CosmosDistrib.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA5BA62E8AFC8C97AF79EEC4 /* FunflowTests.swift in Sources */,
+				ED5DAC6E21CD8CD3002E0FD1 /* CosmosDistrib.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA5BA84CF04DA4A55DDB027E /* FunflowUITests.swift in Sources */,
+				ED5DAC6F21CD8CD3002E0FD1 /* CosmosDistrib.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
