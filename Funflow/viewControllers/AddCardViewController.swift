@@ -8,12 +8,11 @@
 
 import UIKit
 
-class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UITextViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIAlertViewDelegate {
+class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UITextViewDelegate {
  
     fileprivate var imagePath : String!
     let dateFormatter : DateFormatter = DateFormatter()
     var categoryList : [String] = ["a", "b", "c", "d"]
-    var imagePicker = UIImagePickerController()
     
     @IBOutlet weak var titleFieldLabel: UILabel!
     @IBOutlet weak var categoryFieldLabel: UILabel!
@@ -42,11 +41,13 @@ class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var browseImageButton: UIButton!
     
+    var alert = UIAlertController(title:"Choose Image", message: nil, preferredStyle: .actionSheet)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         cardImageView.backgroundColor = UIColor.white
-        cardImageView.image = #imageLiteral(resourceName: "nc_test")
+        //cardImageView.image = #imageLiteral(resourceName: "nc_test")
         cardImageView.layer.cornerRadius = ConfigurationParam.roundedCorners
         
         self.formContentView.backgroundColor = ConfigurationParam.backgroundColor
@@ -92,17 +93,14 @@ class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         let pickerView = UIPickerView()
         pickerView.delegate = self
         pickerView.dataSource = self
-        
         sender.inputView = pickerView
     }
     
-    @IBAction func chooseImageAction(_ sender: Any) {
-        if UIImagePickerController.isSourceTypeAvailable((.savedPhotosAlbum)){
-            imagePicker.delegate = self
-            imagePicker.sourceType = .savedPhotosAlbum
-            imagePicker.allowsEditing = false
-            
-            self.present(imagePicker, animated: true, completion: nil)
+    @IBAction func chooseImageAction(_ sender: UIButton) {
+        ImagerPickerManager(sender).pickImage(self){
+            image in
+
+            self.profileFlowImage.image = image
         }
     }
     
@@ -161,7 +159,6 @@ class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         resetForm()
     }
     
-    
     @objc func datePickerValueChanged(sender : UIDatePicker){
         releaseDateField.text = dateFormatter.string(from: sender.date)
     }
@@ -180,15 +177,6 @@ class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         categoryField.text = categoryList[row]
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            profileFlowImage.contentMode = .scaleAspectFit
-            profileFlowImage.image = pickedImage
-        }
-        
-        dismiss(animated: true, completion: nil)
     }
 
     func textViewDidBeginEditing(_ textView: UITextView) {
