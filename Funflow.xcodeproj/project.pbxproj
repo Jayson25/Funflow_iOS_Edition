@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6BB4A3449226C72A36D5295F /* Pods_FunflowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89308F497AC6EAE33B84595B /* Pods_FunflowTests.framework */; };
+		702A83AA40D4E779DC3BB339 /* Pods_FunflowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0348372FA39D81B63A65A2C /* Pods_FunflowUITests.framework */; };
 		AA5BA0363FAB82656CD6AA78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA5BA0C628568F99EE13AF43 /* LaunchScreen.storyboard */; };
 		AA5BA533F5D93DF1F41F65B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA5BAFBFDB3DFE18BEE1EEAD /* Assets.xcassets */; };
 		AA5BA62E8AFC8C97AF79EEC4 /* FunflowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BA09C8D5CB153414E2AAB /* FunflowTests.swift */; };
@@ -48,6 +50,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A70AE8CDD4802F98C5374DA /* Pods-FunflowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunflowUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FunflowUITests/Pods-FunflowUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		89308F497AC6EAE33B84595B /* Pods_FunflowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FunflowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91419F70A32E063400903E72 /* Pods-FunflowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunflowTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FunflowTests/Pods-FunflowTests.release.xcconfig"; sourceTree = "<group>"; };
+		9BE1840C2FAF0E4937E4903E /* Pods-FunflowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunflowTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FunflowTests/Pods-FunflowTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9E045EFD3F984D6A888DF68A /* Pods_Funflow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Funflow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5BA09C8D5CB153414E2AAB /* FunflowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunflowTests.swift; sourceTree = "<group>"; };
 		AA5BA13E43D0862A75AEA5A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
@@ -62,6 +68,8 @@
 		AA5BAF6E636B5689046F30C9 /* Funflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Funflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5BAFBFDB3DFE18BEE1EEAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C50149421A53B5791BCA2AA5 /* Pods-Funflow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Funflow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Funflow/Pods-Funflow.debug.xcconfig"; sourceTree = "<group>"; };
+		D39261A6E0B8814A9BDF7873 /* Pods-FunflowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunflowUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FunflowUITests/Pods-FunflowUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E0348372FA39D81B63A65A2C /* Pods_FunflowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FunflowUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED38F4FF21BFE61100677F24 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		ED38F50521C002CE00677F24 /* ConfigurationParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationParam.swift; sourceTree = "<group>"; };
 		ED38F50721C003EC00677F24 /* ListOfCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfCards.swift; sourceTree = "<group>"; };
@@ -85,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BB4A3449226C72A36D5295F /* Pods_FunflowTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				702A83AA40D4E779DC3BB339 /* Pods_FunflowUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +121,10 @@
 			children = (
 				C50149421A53B5791BCA2AA5 /* Pods-Funflow.debug.xcconfig */,
 				F5BC69B0645F642E5829F9A3 /* Pods-Funflow.release.xcconfig */,
+				9BE1840C2FAF0E4937E4903E /* Pods-FunflowTests.debug.xcconfig */,
+				91419F70A32E063400903E72 /* Pods-FunflowTests.release.xcconfig */,
+				2A70AE8CDD4802F98C5374DA /* Pods-FunflowUITests.debug.xcconfig */,
+				D39261A6E0B8814A9BDF7873 /* Pods-FunflowUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -226,6 +240,8 @@
 			children = (
 				EDF3934921D4D89300E2B7B2 /* Funflow.xcodeproj */,
 				9E045EFD3F984D6A888DF68A /* Pods_Funflow.framework */,
+				89308F497AC6EAE33B84595B /* Pods_FunflowTests.framework */,
+				E0348372FA39D81B63A65A2C /* Pods_FunflowUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -244,6 +260,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA5BADB8F49A7944B75D3B3E /* Build configuration list for PBXNativeTarget "FunflowTests" */;
 			buildPhases = (
+				4E6139334DD2E3063A0E88F2 /* [CP] Check Pods Manifest.lock */,
 				AA5BA6543BD6CFD7D45C11FA /* Sources */,
 				AA5BA633614C7D6A23120067 /* Frameworks */,
 				AA5BACC93FC3B9EDBDB0DA2C /* Resources */,
@@ -281,6 +298,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA5BA15FC0062A6153A1926D /* Build configuration list for PBXNativeTarget "FunflowUITests" */;
 			buildPhases = (
+				ABE60560E4195732334385D6 /* [CP] Check Pods Manifest.lock */,
 				AA5BA8BC8164160F86452E96 /* Sources */,
 				AA5BAE3153C5FE9419F37051 /* Frameworks */,
 				AA5BAD6B7227A569C5414699 /* Resources */,
@@ -384,6 +402,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4E6139334DD2E3063A0E88F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FunflowTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A452E4A930EB15B216E249DB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -404,6 +444,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Funflow/Pods-Funflow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABE60560E4195732334385D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FunflowUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -484,6 +546,7 @@
 /* Begin XCBuildConfiguration section */
 		AA5BA5ECD6470B787FCBE83C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D39261A6E0B8814A9BDF7873 /* Pods-FunflowUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = FunflowUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -551,6 +614,7 @@
 		};
 		AA5BA7EBDDE188122B2DDA0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91419F70A32E063400903E72 /* Pods-FunflowTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Funflow.app/Funflow";
 				INFOPLIST_FILE = FunflowTests/Info.plist;
@@ -644,6 +708,7 @@
 		};
 		AA5BAB011F6FE052FAC15EBA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A70AE8CDD4802F98C5374DA /* Pods-FunflowUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = FunflowUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -657,6 +722,7 @@
 		};
 		AA5BAD2DE05AD097F16CC457 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BE1840C2FAF0E4937E4903E /* Pods-FunflowTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Funflow.app/Funflow";
 				INFOPLIST_FILE = FunflowTests/Info.plist;
