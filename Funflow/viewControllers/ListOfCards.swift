@@ -9,6 +9,8 @@
 import UIKit
 
 class ListOfCards: UITableViewController {
+    
+    private let identifier = "flowRow"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,19 +27,22 @@ class ListOfCards: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return ConfigurationParam.categories.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! CardCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! CardCell
 
         // Configure the cell...
+        
+        cell.labelView.text = "hello"
+        cell.logoCard.image = UIImage(named: "movie")
 
         return cell
     }

@@ -22,9 +22,12 @@
 		ED5DAC6921CD86E2002E0FD1 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DAC6821CD86E2002E0FD1 /* Task.swift */; };
 		ED5DAC6B21CD8958002E0FD1 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DAC6A21CD8958002E0FD1 /* Flow.swift */; };
 		ED66B9D521B964A6004551B0 /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED66B9D421B964A6004551B0 /* AddCardViewController.swift */; };
+		ED675A8221D5127E0078BC55 /* TaskTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED675A8121D5127E0078BC55 /* TaskTableDelegate.swift */; };
 		ED90CF8B21CDA596004A95D7 /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED90CF8A21CDA596004A95D7 /* ImagePickerManager.swift */; };
 		ED90CF8F21CDB2EA004A95D7 /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED90CF8E21CDB2EA004A95D7 /* CosmosDistrib.swift */; };
+		EDF3930321D4CCB400E2B7B2 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF3930221D4CCB400E2B7B2 /* TaskCell.swift */; };
 		EDFF00EB21BE9B5D00CD9AED /* CategoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF00EA21BE9B5D00CD9AED /* CategoryCollectionViewController.swift */; };
+		FF9FF0621754280F2BC9DB95 /* Pods_Funflow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E045EFD3F984D6A888DF68A /* Pods_Funflow.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E045EFD3F984D6A888DF68A /* Pods_Funflow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Funflow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5BA09C8D5CB153414E2AAB /* FunflowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunflowTests.swift; sourceTree = "<group>"; };
 		AA5BA13E43D0862A75AEA5A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		AA5BA2CA1D9083095049A139 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,6 +61,7 @@
 		AA5BAC35A0A858BF2D3B6FAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		AA5BAF6E636B5689046F30C9 /* Funflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Funflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5BAFBFDB3DFE18BEE1EEAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C50149421A53B5791BCA2AA5 /* Pods-Funflow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Funflow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Funflow/Pods-Funflow.debug.xcconfig"; sourceTree = "<group>"; };
 		ED38F4FF21BFE61100677F24 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		ED38F50521C002CE00677F24 /* ConfigurationParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationParam.swift; sourceTree = "<group>"; };
 		ED38F50721C003EC00677F24 /* ListOfCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfCards.swift; sourceTree = "<group>"; };
@@ -66,9 +71,13 @@
 		ED5DAC6821CD86E2002E0FD1 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		ED5DAC6A21CD8958002E0FD1 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 		ED66B9D421B964A6004551B0 /* AddCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
+		ED675A8121D5127E0078BC55 /* TaskTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableDelegate.swift; sourceTree = "<group>"; };
 		ED90CF8A21CDA596004A95D7 /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
 		ED90CF8E21CDB2EA004A95D7 /* CosmosDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CosmosDistrib.swift; path = "../../../../Downloads/Cosmos-master/Distrib/CosmosDistrib.swift"; sourceTree = "<group>"; };
+		EDF3930221D4CCB400E2B7B2 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		EDF3934921D4D89300E2B7B2 /* Funflow.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Funflow.xcodeproj; sourceTree = "<group>"; };
 		EDFF00EA21BE9B5D00CD9AED /* CategoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewController.swift; sourceTree = "<group>"; };
+		F5BC69B0645F642E5829F9A3 /* Pods-Funflow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Funflow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Funflow/Pods-Funflow.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,12 +99,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF9FF0621754280F2BC9DB95 /* Pods_Funflow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E6FA581203681D954CF52C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C50149421A53B5791BCA2AA5 /* Pods-Funflow.debug.xcconfig */,
+				F5BC69B0645F642E5829F9A3 /* Pods-Funflow.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AA5BA25043EFCB8F7012FD1D /* Funflow */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +158,8 @@
 				AA5BA25043EFCB8F7012FD1D /* Funflow */,
 				AA5BAC519A834D7C75E67290 /* FunflowTests */,
 				AA5BA62E60778933676D1FE8 /* FunflowUITests */,
+				EDF3934821D4D89200E2B7B2 /* Frameworks */,
+				3E6FA581203681D954CF52C2 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				ED38F50921C004AC00677F24 /* CardCell.swift */,
+				EDF3930221D4CCB400E2B7B2 /* TaskCell.swift */,
 				ED38F4FF21BFE61100677F24 /* CategoryCell.swift */,
 			);
 			path = cellParameters;
@@ -194,8 +216,25 @@
 				ED90CF8A21CDA596004A95D7 /* ImagePickerManager.swift */,
 				ED90CF8E21CDB2EA004A95D7 /* CosmosDistrib.swift */,
 				ED38F51321C3B6A300677F24 /* buttonLayout.swift */,
+				ED675A8121D5127E0078BC55 /* TaskTableDelegate.swift */,
 			);
 			path = itemTweakers;
+			sourceTree = "<group>";
+		};
+		EDF3934821D4D89200E2B7B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EDF3934921D4D89300E2B7B2 /* Funflow.xcodeproj */,
+				9E045EFD3F984D6A888DF68A /* Pods_Funflow.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EDF3934A21D4D89300E2B7B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,9 +262,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA5BA94E3F6220DBECF45A3B /* Build configuration list for PBXNativeTarget "Funflow" */;
 			buildPhases = (
+				1E6D1067F5E52A38AF9E007E /* [CP] Check Pods Manifest.lock */,
 				AA5BA5B45EF4CB5EE4699B89 /* Sources */,
 				AA5BAE4808581F22F8E7E9DD /* Frameworks */,
 				AA5BAC79F309DA6017E301FF /* Resources */,
+				A452E4A930EB15B216E249DB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -278,6 +319,12 @@
 			mainGroup = AA5BA7C500B03864B07FD1D1;
 			productRefGroup = AA5BA614C835DCA42F923BFE /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EDF3934A21D4D89300E2B7B2 /* Products */;
+					ProjectRef = EDF3934921D4D89300E2B7B2 /* Funflow.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				AA5BA3B34A4DE3B46355AB2B /* Funflow */,
@@ -314,6 +361,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1E6D1067F5E52A38AF9E007E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Funflow-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A452E4A930EB15B216E249DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Funflow/Pods-Funflow-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Funflow/Pods-Funflow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AA5BA5B45EF4CB5EE4699B89 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -323,8 +417,10 @@
 				AA5BA63E968FED8569148857 /* AppDelegate.swift in Sources */,
 				ED5DAC6921CD86E2002E0FD1 /* Task.swift in Sources */,
 				ED66B9D521B964A6004551B0 /* AddCardViewController.swift in Sources */,
+				EDF3930321D4CCB400E2B7B2 /* TaskCell.swift in Sources */,
 				ED38F50821C003EC00677F24 /* ListOfCards.swift in Sources */,
 				ED38F50621C002CE00677F24 /* ConfigurationParam.swift in Sources */,
+				ED675A8221D5127E0078BC55 /* TaskTableDelegate.swift in Sources */,
 				ED5DAC6721CD842C002E0FD1 /* Category.swift in Sources */,
 				ED5DAC6B21CD8958002E0FD1 /* Flow.swift in Sources */,
 				EDFF00EB21BE9B5D00CD9AED /* CategoryCollectionViewController.swift in Sources */,
@@ -469,6 +565,7 @@
 		};
 		AA5BA857FA3A16DC4CE1EC7B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5BC69B0645F642E5829F9A3 /* Pods-Funflow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -574,6 +671,7 @@
 		};
 		AA5BAD97D9CE91EFCA9484F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C50149421A53B5791BCA2AA5 /* Pods-Funflow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

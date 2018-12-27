@@ -8,8 +8,9 @@
 
 import UIKit
 
+
 class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UITextViewDelegate {
- 
+
     fileprivate var imagePath : String!
     let dateFormatter : DateFormatter = DateFormatter()
     var categoryList : [String] = ["a", "b", "c", "d"]
@@ -28,6 +29,8 @@ class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var categoryField: UITextField!
     @IBOutlet weak var authorField: UITextField!
     
+    @IBOutlet weak var taskTable: UITableView!
+    
     @IBOutlet weak var profileFlowImage: UIImageView!
     @IBOutlet weak var cardImageView: UIImageView!
     
@@ -41,7 +44,12 @@ class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var browseImageButton: UIButton!
     
+    @IBOutlet weak var keyboardHeightLayoutConstraint: NSLayoutConstraint?
+    
+    var taskTableDelegate : TaskTableDelegate?
+    
     var alert = UIAlertController(title:"Choose Image", message: nil, preferredStyle: .actionSheet)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +59,7 @@ class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         cardImageView.layer.cornerRadius = ConfigurationParam.roundedCorners
         
         self.formContentView.backgroundColor = ConfigurationParam.backgroundColor
+        self.taskTableDelegate = TaskTableDelegate([])
         
         dateFormatter.dateStyle = DateFormatter.Style.medium
         dateFormatter.timeStyle = DateFormatter.Style.none
@@ -70,6 +79,9 @@ class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         descriptionFieldLabel.textColor = ConfigurationParam.fontColor
         RatingEditLabel.textColor = ConfigurationParam.fontColor
         
+        self.taskTable.delegate = self.taskTableDelegate
+        self.taskTable.dataSource = self.taskTableDelegate
+        
         let date = Date()
         releaseDateField.text = dateFormatter.string(from: date)
         
@@ -79,6 +91,29 @@ class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         starRatingEdit.settings.fillMode = .full
         starRatingEdit.settings.starMargin = 10
         starRatingEdit.rating = 0
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        registerNotifications()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        unregisterNotifications()
+    }
+    
+    private func registerNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    private func unregisterNotifications() {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     @IBAction func releaseDateEditing(_ sender: UITextField) {
@@ -180,21 +215,35 @@ class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
 
     func textViewDidBeginEditing(_ textView: UITextView) {
-        let scrollPoint : CGPoint = CGPoint(x: 0, y: textView.frame.origin.y)
-        self.scrollFieldForm.setContentOffset(scrollPoint, animated: true)
+        if let selectedRange = textView.selectedTextRange {
+            
+            _ = textView.offset(from: textView.beginningOfDocument, to: selectedRange.start)
+        }
+        
+        animateViewMoving(up: true, moveValue: 100)
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
-        self.scrollFieldForm.setContentOffset(CGPoint.zero, animated: true)
+        animateViewMoving(up: false, moveValue: 100)
+    }
+    
+    private func animateViewMoving(up : Bool, moveValue : CGFloat){
+        let movementDuration : TimeInterval = 0.3
+        var movement : CGFloat!
+        if (up) { movement = -moveValue} else { movement = moveValue }
+        UIView.beginAnimations("animateView", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(movementDuration)
+        self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
+        UIView.commitAnimations()
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        let scrollPoint : CGPoint = CGPoint(x: 0, y: textField.frame.origin.y)
-        self.scrollFieldForm.setContentOffset(scrollPoint, animated: true)
+        animateViewMoving(up: true, moveValue: 100)
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        self.scrollFieldForm.setContentOffset(CGPoint.zero, animated: true)
+        animateViewMoving(up: false, moveValue: 100)
     }
     
     func resetForm(){
@@ -206,6 +255,23 @@ class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         authorField.text = ""
         descriptionAreaEdit.text = ""
         starRatingEdit.rating = 0
+        profileFlowImage.image = nil
+    }
+    
+    @objc func keyboardWillShow(notification : NSNotification){
+        
+        var userInfo = notification.userInfo!
+        var keyboardFrame : CGRect = ((userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue)!
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        
+        var contentInset : UIEdgeInsets = self.scrollFieldForm.contentInset
+        contentInset.bottom = keyboardFrame.size.height
+        self.scrollFieldForm.contentInset = contentInset
+    }
+    
+    @objc func keyboardWillHide(notification : NSNotification){
+        let contentInset : UIEdgeInsets = UIEdgeInsets.zero
+        self.scrollFieldForm.contentInset = contentInset
     }
 }
 

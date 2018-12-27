@@ -45,7 +45,7 @@ final class CategoryCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 9
+        return ConfigurationParam.categories.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -55,14 +55,17 @@ final class CategoryCollectionViewController: UICollectionViewController {
         cell.layer.masksToBounds = true
         cell.layer.cornerRadius = ConfigurationParam.roundedCorners
         cell.backgroundColor = UIColor.white
-        cell.categoryIcon.image =  #imageLiteral(resourceName: "anime_manga")
+        cell.categoryIcon.image = UIImage(named: ConfigurationParam.categories[indexPath.row].getIcon())?.withRenderingMode(.alwaysTemplate)
+        cell.categoryIcon.tintColor = ConfigurationParam.themeColor
+        cell.categoryTitle.text = ConfigurationParam.categories[indexPath.row].getName()
+        cell.categoryTitle.textColor = ConfigurationParam.fontColor
         cell.buttonZone.tag = indexPath.row
     
         return cell
     }
     
     // MARK: UICollectionViewDelegate
-
+ 
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {

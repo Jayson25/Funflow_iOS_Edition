@@ -9,19 +9,13 @@
 import UIKit
 
 class Category{
-    private var id : Int!
     private var name : String!
     private var icon : String!
     
     public init(){}
-    public init(id : Int, name : String, icon : String){
-        self.id = id
+    public init(name : String, icon : String){
         self.name = name
         self.icon = icon
-    }
-    
-    public func getID() -> Int{
-        return self.id
     }
     
     public func getName() -> String{
@@ -30,10 +24,6 @@ class Category{
     
     public func getIcon() -> String{
         return self.icon
-    }
-    
-    public func setID(_ id : Int){
-        self.id = id
     }
     
     public func setName(_ name : String){

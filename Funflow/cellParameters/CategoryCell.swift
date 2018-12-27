@@ -11,10 +11,12 @@ import UIKit
 class CategoryCell: UICollectionViewCell {
     
     @IBOutlet weak var categoryIcon: UIImageView!
-    
     @IBOutlet weak var buttonZone: UIButton!
+    @IBOutlet weak var categoryTitle : UILabel!
     
     @IBAction func onClick(_ sender: Any) {
         print("button ", buttonZone.tag)
     }
+    
+    
 }
