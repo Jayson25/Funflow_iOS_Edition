@@ -13,7 +13,6 @@ class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 
     fileprivate var imagePath : String!
     let dateFormatter : DateFormatter = DateFormatter()
-    var categoryList : [String] = ["a", "b", "c", "d"]
     
     @IBOutlet weak var titleFieldLabel: UILabel!
     @IBOutlet weak var categoryFieldLabel: UILabel!
@@ -29,7 +28,7 @@ class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var categoryField: UITextField!
     @IBOutlet weak var authorField: UITextField!
     
-    @IBOutlet weak var taskTable: UITableView!
+    @IBOutlet weak var taskTable: TaskTableView!
     
     @IBOutlet weak var profileFlowImage: UIImageView!
     @IBOutlet weak var cardImageView: UIImageView!
@@ -40,6 +39,7 @@ class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBOutlet weak var starRatingEdit: CosmosView!
     
+    @IBOutlet weak var addTaskButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var browseImageButton: UIButton!
@@ -50,16 +50,18 @@ class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     var alert = UIAlertController(title:"Choose Image", message: nil, preferredStyle: .actionSheet)
     
+    var tasks : [Task]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         cardImageView.backgroundColor = UIColor.white
-        //cardImageView.image = #imageLiteral(resourceName: "nc_test")
         cardImageView.layer.cornerRadius = ConfigurationParam.roundedCorners
         
+        tasks = [Task]()
+        
         self.formContentView.backgroundColor = ConfigurationParam.backgroundColor
-        self.taskTableDelegate = TaskTableDelegate([])
+        self.taskTableDelegate = TaskTableDelegate(self, self.tasks ?? [])
         
         dateFormatter.dateStyle = DateFormatter.Style.medium
         dateFormatter.timeStyle = DateFormatter.Style.none
@@ -81,11 +83,14 @@ class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         
         self.taskTable.delegate = self.taskTableDelegate
         self.taskTable.dataSource = self.taskTableDelegate
+        self.taskTable.tableFooterView = UIView(frame: CGRect.zero)
+        self.taskTable.setupEmptyBackgroundView()
         
         let date = Date()
         releaseDateField.text = dateFormatter.string(from: date)
         
         starRatingEdit.backgroundColor = ConfigurationParam.backgroundColor
+        starRatingEdit.filledColor = ConfigurationParam.themeColor
         starRatingEdit.settings.updateOnTouch = true
         starRatingEdit.starSize = 32
         starRatingEdit.settings.fillMode = .full
@@ -139,6 +144,16 @@ class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         }
     }
     
+    @IBAction func addTasskAction(_ sender: UIButton) {
+        taskTable.beginUpdates()
+
+            self.taskTableDelegate!.tasks.append(Task())
+            let indexPath = IndexPath(row: self.tasks.count-1, section: 0)
+            taskTable.insertRows(at: [indexPath], with: .automatic)
+        
+        taskTable.endUpdates()
+    }
+    
     @IBAction func saveFlowAction(_ sender: Any) {
         let title : String = titleField.text!
         let category : String = categoryField.text!
@@ -147,6 +162,7 @@ class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         let description : String = descriptionAreaEdit.text!
         var image : String!
         let rating : Int = Int(starRatingEdit.rating)
+        let tasks : [Task] = self.taskTableDelegate!.tasks
         
         /**save Image to folder app system
         */
@@ -185,7 +201,7 @@ class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             }
         }
 
-        resetForm()
+        self.resetForm()
         
         //need to save datas to DB next
     }
@@ -203,15 +219,15 @@ class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return categoryList.count
+        return ConfigurationParam.categories.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return categoryList[row]
+        return ConfigurationParam.categories[row].getName()
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        categoryField.text = categoryList[row]
+        categoryField.text = ConfigurationParam.categories[row].getName()
     }
 
     func textViewDidBeginEditing(_ textView: UITextView) {
@@ -249,13 +265,17 @@ class AddCardViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     func resetForm(){
         let date = Date()
         
-        releaseDateField.text = dateFormatter.string(from: date)
-        titleField.text = ""
-        categoryField.text = ""
-        authorField.text = ""
-        descriptionAreaEdit.text = ""
-        starRatingEdit.rating = 0
-        profileFlowImage.image = nil
+        self.releaseDateField.text = dateFormatter.string(from: date)
+        self.titleField.text = ""
+        self.categoryField.text = ""
+        self.authorField.text = ""
+        self.descriptionAreaEdit.text = ""
+        self.starRatingEdit.rating = 0
+        self.profileFlowImage.image = nil
+        
+        /*taskTable.beginUpdates()
+            self.taskTableDelegate?.tasks = [Task]()
+            self.taskTable.de*/
     }
     
     @objc func keyboardWillShow(notification : NSNotification){

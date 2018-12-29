@@ -25,9 +25,11 @@
 		ED5DAC6B21CD8958002E0FD1 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DAC6A21CD8958002E0FD1 /* Flow.swift */; };
 		ED66B9D521B964A6004551B0 /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED66B9D421B964A6004551B0 /* AddCardViewController.swift */; };
 		ED675A8221D5127E0078BC55 /* TaskTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED675A8121D5127E0078BC55 /* TaskTableDelegate.swift */; };
+		ED76248621D7F8EC00DB3D34 /* TaskTableBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED76248521D7F8EC00DB3D34 /* TaskTableBackgroundView.swift */; };
 		ED90CF8B21CDA596004A95D7 /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED90CF8A21CDA596004A95D7 /* ImagePickerManager.swift */; };
 		ED90CF8F21CDB2EA004A95D7 /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED90CF8E21CDB2EA004A95D7 /* CosmosDistrib.swift */; };
 		EDF3930321D4CCB400E2B7B2 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF3930221D4CCB400E2B7B2 /* TaskCell.swift */; };
+		EDFC33DD21D80C8D0087A472 /* TaskTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFC33DC21D80C8D0087A472 /* TaskTableView.swift */; };
 		EDFF00EB21BE9B5D00CD9AED /* CategoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF00EA21BE9B5D00CD9AED /* CategoryCollectionViewController.swift */; };
 		FF9FF0621754280F2BC9DB95 /* Pods_Funflow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E045EFD3F984D6A888DF68A /* Pods_Funflow.framework */; };
 /* End PBXBuildFile section */
@@ -80,10 +82,12 @@
 		ED5DAC6A21CD8958002E0FD1 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 		ED66B9D421B964A6004551B0 /* AddCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
 		ED675A8121D5127E0078BC55 /* TaskTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableDelegate.swift; sourceTree = "<group>"; };
+		ED76248521D7F8EC00DB3D34 /* TaskTableBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableBackgroundView.swift; sourceTree = "<group>"; };
 		ED90CF8A21CDA596004A95D7 /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
 		ED90CF8E21CDB2EA004A95D7 /* CosmosDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CosmosDistrib.swift; path = "../../../../Downloads/Cosmos-master/Distrib/CosmosDistrib.swift"; sourceTree = "<group>"; };
 		EDF3930221D4CCB400E2B7B2 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		EDF3934921D4D89300E2B7B2 /* Funflow.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Funflow.xcodeproj; sourceTree = "<group>"; };
+		EDFC33DC21D80C8D0087A472 /* TaskTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableView.swift; sourceTree = "<group>"; };
 		EDFF00EA21BE9B5D00CD9AED /* CategoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewController.swift; sourceTree = "<group>"; };
 		F5BC69B0645F642E5829F9A3 /* Pods-Funflow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Funflow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Funflow/Pods-Funflow.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -200,8 +204,8 @@
 			isa = PBXGroup;
 			children = (
 				EDFF00EA21BE9B5D00CD9AED /* CategoryCollectionViewController.swift */,
-				ED66B9D421B964A6004551B0 /* AddCardViewController.swift */,
 				ED38F50721C003EC00677F24 /* ListOfCards.swift */,
+				ED66B9D421B964A6004551B0 /* AddCardViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -231,6 +235,8 @@
 				ED90CF8E21CDB2EA004A95D7 /* CosmosDistrib.swift */,
 				ED38F51321C3B6A300677F24 /* buttonLayout.swift */,
 				ED675A8121D5127E0078BC55 /* TaskTableDelegate.swift */,
+				ED76248521D7F8EC00DB3D34 /* TaskTableBackgroundView.swift */,
+				EDFC33DC21D80C8D0087A472 /* TaskTableView.swift */,
 			);
 			path = itemTweakers;
 			sourceTree = "<group>";
@@ -478,6 +484,7 @@
 				ED38F50A21C004AC00677F24 /* CardCell.swift in Sources */,
 				AA5BA63E968FED8569148857 /* AppDelegate.swift in Sources */,
 				ED5DAC6921CD86E2002E0FD1 /* Task.swift in Sources */,
+				EDFC33DD21D80C8D0087A472 /* TaskTableView.swift in Sources */,
 				ED66B9D521B964A6004551B0 /* AddCardViewController.swift in Sources */,
 				EDF3930321D4CCB400E2B7B2 /* TaskCell.swift in Sources */,
 				ED38F50821C003EC00677F24 /* ListOfCards.swift in Sources */,
@@ -489,6 +496,7 @@
 				ED90CF8F21CDB2EA004A95D7 /* CosmosDistrib.swift in Sources */,
 				ED38F50021BFE61100677F24 /* CategoryCell.swift in Sources */,
 				ED38F51421C3B6A300677F24 /* buttonLayout.swift in Sources */,
+				ED76248621D7F8EC00DB3D34 /* TaskTableBackgroundView.swift in Sources */,
 				ED90CF8B21CDA596004A95D7 /* ImagePickerManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

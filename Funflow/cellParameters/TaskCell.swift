@@ -9,29 +9,58 @@
 import UIKit
 import BEMCheckBox
 
-class TaskCell: UITableViewCell {
+class TaskCell: UITableViewCell, UITextViewDelegate, BEMCheckBoxDelegate{
     
+    var task : Task!
     var checkbox : BEMCheckBox!
-    var taskLabel : UILabel!
+    var taskTextView : UITextView!
     var isDone = false
     
-    override func awakeFromNib()  {
-        //super.awakeFromNib()
-        //super.init(style: UITableViewCell.CellStyle.value1, reuseIdentifier: reuseIdentifier)
+    var isEditable : Bool = true {
+        didSet {
+            if isEditable {
+                self.taskTextView.isEditable = true
+            }
         
-        self.taskLabel = UILabel(frame: CGRect(x: 20.0, y: 3.0, width: 0.0, height: 0.0))
+            else {
+                self.taskTextView.isEditable = false
+            }
+        }
+    }
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        //self.taskTextView.addObserver(self, forKeyPath: "contentSize", options: (NSKeyValueObservingOptions.new), context: nil)
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.selectionStyle = .none
+        
+        self.taskTextView = UITextView(frame: CGRect(x: 20.0, y: 3.0, width: 0.0, height: 0.0))
         self.checkbox = BEMCheckBox(frame: CGRect(x: 0.0, y: 0.0, width: 0.0, height: 0.0))
-        self.contentView.addSubview(checkbox)
-        self.contentView.addSubview(taskLabel)
+        self.checkbox.delegate = self
+        
+        self.contentView.addSubview(self.checkbox)
+        self.contentView.addSubview(self.taskTextView)
 
-        taskLabel.text = "j'ai mal au petit pois"
+        self.taskTextView.delegate = self
+        self.taskTextView.text = "edit text here"
+        self.taskTextView.textContainer.maximumNumberOfLines = 1
+        self.taskTextView.font = UIFont(name: (self.taskTextView.font?.fontName)!, size: 15)
+        self.taskTextView.isScrollEnabled = false
 
         self.checkbox.setOn(false, animated: true)
         self.checkbox.onAnimationType = BEMAnimationType.stroke
         self.checkbox.offAnimationType = BEMAnimationType.stroke
         
         self.checkbox.translatesAutoresizingMaskIntoConstraints = false
-        self.taskLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.taskTextView.translatesAutoresizingMaskIntoConstraints = false
         
         
         let centerYCBConstraint = NSLayoutConstraint(
@@ -74,8 +103,8 @@ class TaskCell: UITableViewCell {
             constant: self.contentView.frame.height
         )
         
-        let centerYTLabelConstraint = NSLayoutConstraint(
-            item: self.taskLabel,
+        let centerYTTextViewConstraint = NSLayoutConstraint(
+            item: self.taskTextView,
             attribute: NSLayoutConstraint.Attribute.centerY,
             relatedBy: NSLayoutConstraint.Relation.equal,
             toItem: self.contentView,
@@ -85,7 +114,7 @@ class TaskCell: UITableViewCell {
         )
         
         let leftTLabelConstraint = NSLayoutConstraint(
-            item: self.taskLabel,
+            item: self.taskTextView,
             attribute: .leading,
             relatedBy: .equal,
             toItem: self.checkbox,
@@ -95,17 +124,17 @@ class TaskCell: UITableViewCell {
         )
         
         let rightTLabelConstraint = NSLayoutConstraint(
-            item: self.taskLabel,
+            item: self.taskTextView,
             attribute: .trailing,
             relatedBy: .equal,
             toItem: self.contentView,
             attribute: .trailing,
             multiplier: 1.0,
-            constant: 20.0
+            constant: -20.0
         )
         
         let heightTLabelConstraint = NSLayoutConstraint(
-            item: self.taskLabel,
+            item: self.taskTextView,
             attribute: .height,
             relatedBy: .equal,
             toItem: nil,
@@ -114,33 +143,20 @@ class TaskCell: UITableViewCell {
             constant: self.contentView.frame.height
         )
         
-       // let centerYLabel = NSLayoutConstraint(item: taskLabel, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.contentView, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 1, constant: 0)
-     //   let leftLabel = NSLayoutConstraint(item: taskLabel, attribute: NSLayoutConstraint.Attribute.leading, relatedBy: NSLayoutConstraint.Relation.equal, toItem: checkbox, attribute: NSLayoutConstraint.Attribute.trailing, multiplier: 1, constant: 50)
         
         NSLayoutConstraint.activate([
-            centerYCBConstraint,
-            leftCBConstraint,
-            widthCBConstraint,
-            heightCBConstraint,
-            centerYTLabelConstraint,
-            leftTLabelConstraint,
-            rightTLabelConstraint,
-            heightTLabelConstraint
+            //checkbox constraints
+            centerYCBConstraint, leftCBConstraint, widthCBConstraint, heightCBConstraint,
+            //label of cell constraints
+            centerYTTextViewConstraint, leftTLabelConstraint, rightTLabelConstraint, heightTLabelConstraint
         ])
-        
-       // self.contentView.addConstraint(leftCB, widthCB)
     }
     
-   /* required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }*/
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func textViewDidEndEditing(_ textView: UITextView) {
+        self.task.setDescription(textView.text)
     }
     
-    
-    
+    func animationDidStop(for checkBox: BEMCheckBox) {
+        self.task.setDone(checkbox.on)
+    }
 }

@@ -9,22 +9,21 @@
 import UIKit
 
 class Task{
-    private var id : Int!
     private var flowID : Int!
     private var description : String!
     private var isDone : Bool!
     
-    public init(){}
-    public init(id : Int, flowID : Int, description : String, isDone : Bool){
-        self.id = id
+    public init(){
+        self.description = ""
+        self.isDone = false
+    }
+    
+    public init(flowID : Int, description : String, isDone : Bool){
         self.flowID = flowID
         self.description = description
         self.isDone = isDone
     }
     
-    public func getID() -> Int{
-        return self.id
-    }
     
     public func getFlowID() -> Int{
         return self.flowID
@@ -36,10 +35,6 @@ class Task{
     
     public func isItDone() -> Bool{
         return self.isDone
-    }
-    
-    public func setID(_ id : Int){
-        self.id = id
     }
     
     public func setFlowID(_ flowID : Int){

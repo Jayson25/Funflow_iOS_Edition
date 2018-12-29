@@ -144,13 +144,13 @@
                                                 <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hv3-XR-yP8">
-                                                <rect key="frame" x="27" y="840" width="125" height="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hv3-XR-yP8">
+                                                <rect key="frame" x="27" y="856" width="43" height="30"/>
                                                 <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Sr4-Vg-163">
-                                                <rect key="frame" x="27" y="536" width="780" height="270"/>
+                                                <rect key="frame" x="27" y="536" width="767" height="270"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="270" id="Ipc-NL-QjL"/>
@@ -192,8 +192,8 @@
                                                 <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zbk-ZS-awj" customClass="TaskTable" customModule="Funflow" customModuleProvider="target">
-                                                <rect key="frame" x="27" y="872" width="767" height="232"/>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zbk-ZS-awj" customClass="TaskTableView" customModule="Funflow" customModuleProvider="target">
+                                                <rect key="frame" x="27" y="894" width="767" height="232"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="232" id="ltk-mb-egM"/>
@@ -209,6 +209,13 @@
                                                     </tableViewCell>
                                                 </prototypes>
                                             </tableView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOu-IR-nZE">
+                                                <rect key="frame" x="764" y="856" width="30" height="30"/>
+                                                <state key="normal" title="Add"/>
+                                                <connections>
+                                                    <action selector="addTasskAction:" destination="Ad5-3G-TBW" eventType="touchUpInside" id="83X-fe-Vrv"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -216,10 +223,10 @@
                                             <constraint firstAttribute="height" constant="1300" id="4QJ-dV-S1x"/>
                                             <constraint firstItem="dGu-aD-bQs" firstAttribute="top" secondItem="YZy-qR-TYY" secondAttribute="bottom" constant="35" id="52x-Ah-qIq"/>
                                             <constraint firstItem="gCI-ve-frb" firstAttribute="trailing" secondItem="5cS-uh-vxv" secondAttribute="trailing" id="8an-Rr-J9Z"/>
+                                            <constraint firstItem="Zbk-ZS-awj" firstAttribute="top" secondItem="AOu-IR-nZE" secondAttribute="bottom" constant="8" symbolic="YES" id="9Po-dK-bE4"/>
                                             <constraint firstItem="s5f-0f-je0" firstAttribute="top" secondItem="s3M-VZ-qg7" secondAttribute="bottom" constant="70" id="9aV-YV-mjj"/>
                                             <constraint firstItem="Gqh-2v-hFb" firstAttribute="leading" secondItem="Qqk-mV-EQh" secondAttribute="leading" id="9f7-sw-55K"/>
                                             <constraint firstItem="dGu-aD-bQs" firstAttribute="trailing" secondItem="5kq-xF-GjD" secondAttribute="trailing" id="9pa-Jt-Lt2"/>
-                                            <constraint firstAttribute="trailing" secondItem="Hv3-XR-yP8" secondAttribute="trailing" constant="682" id="AFo-X3-Isb"/>
                                             <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="pLA-1z-6VN" secondAttribute="bottom" constant="75" id="AOI-4m-WUu"/>
                                             <constraint firstItem="Gqh-2v-hFb" firstAttribute="leading" secondItem="dGu-aD-bQs" secondAttribute="leading" id="An7-zK-EkV"/>
                                             <constraint firstItem="Sr4-Vg-163" firstAttribute="top" secondItem="s5f-0f-je0" secondAttribute="bottom" constant="18" id="IZl-l5-C3l"/>
@@ -239,6 +246,7 @@
                                             <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="pLA-1z-6VN" secondAttribute="trailing" constant="235" id="aY0-jH-xXT"/>
                                             <constraint firstItem="R9o-f5-jtL" firstAttribute="leading" secondItem="5kq-xF-GjD" secondAttribute="trailing" constant="10" id="cLz-mk-lBA"/>
                                             <constraint firstItem="wej-l0-t9x" firstAttribute="top" secondItem="QFS-dd-tDA" secondAttribute="top" constant="33" id="d0v-N2-TPJ"/>
+                                            <constraint firstItem="AOu-IR-nZE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Hv3-XR-yP8" secondAttribute="trailing" constant="694" id="dhR-8g-QFq"/>
                                             <constraint firstItem="R9o-f5-jtL" firstAttribute="leading" secondItem="gCI-ve-frb" secondAttribute="leading" id="dwu-PH-Z9y"/>
                                             <constraint firstItem="s5f-0f-je0" firstAttribute="top" secondItem="QFS-dd-tDA" secondAttribute="top" constant="494" id="fj8-wG-l4y"/>
                                             <constraint firstItem="DNr-ry-1l5" firstAttribute="leading" secondItem="dGu-aD-bQs" secondAttribute="trailing" constant="10" id="hTI-36-iIO"/>
@@ -252,14 +260,17 @@
                                             <constraint firstItem="Zbk-ZS-awj" firstAttribute="top" secondItem="Hv3-XR-yP8" secondAttribute="bottom" constant="8" symbolic="YES" id="mvh-Yf-ndk"/>
                                             <constraint firstItem="9Xn-j9-2sL" firstAttribute="leading" secondItem="QFS-dd-tDA" secondAttribute="leading" constant="235" id="nhb-FS-c42"/>
                                             <constraint firstItem="Gqh-2v-hFb" firstAttribute="centerY" secondItem="dkR-hq-s5B" secondAttribute="centerY" id="oI6-dF-CKj"/>
+                                            <constraint firstItem="Sr4-Vg-163" firstAttribute="trailing" secondItem="AOu-IR-nZE" secondAttribute="trailing" id="oaE-io-xTe"/>
                                             <constraint firstItem="R9o-f5-jtL" firstAttribute="top" secondItem="5cS-uh-vxv" secondAttribute="bottom" constant="27" id="pTo-dS-ayc"/>
                                             <constraint firstItem="wej-l0-t9x" firstAttribute="centerX" secondItem="Sr4-Vg-163" secondAttribute="centerX" id="pZR-yw-VRb"/>
                                             <constraint firstItem="YZy-qR-TYY" firstAttribute="top" secondItem="Gqh-2v-hFb" secondAttribute="bottom" constant="34" id="pcX-Yg-Ea0"/>
                                             <constraint firstItem="pLA-1z-6VN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9Xn-j9-2sL" secondAttribute="trailing" constant="8" symbolic="YES" id="sEP-o8-N7M"/>
-                                            <constraint firstItem="Sr4-Vg-163" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Hv3-XR-yP8" secondAttribute="leading" id="sFq-L7-jqw"/>
+                                            <constraint firstItem="Sr4-Vg-163" firstAttribute="leading" secondItem="Hv3-XR-yP8" secondAttribute="leading" id="sFq-L7-jqw"/>
                                             <constraint firstItem="R9o-f5-jtL" firstAttribute="leading" secondItem="5cS-uh-vxv" secondAttribute="leading" id="t7Z-IE-NM8"/>
                                             <constraint firstItem="iPE-cf-hF7" firstAttribute="top" secondItem="dkR-hq-s5B" secondAttribute="top" id="tCC-kz-I8B"/>
+                                            <constraint firstItem="AOu-IR-nZE" firstAttribute="top" secondItem="Sr4-Vg-163" secondAttribute="bottom" constant="50" id="thA-0d-KS3"/>
                                             <constraint firstItem="Sr4-Vg-163" firstAttribute="leading" secondItem="Zbk-ZS-awj" secondAttribute="leading" id="thm-J2-Owt"/>
+                                            <constraint firstItem="Zbk-ZS-awj" firstAttribute="trailing" secondItem="AOu-IR-nZE" secondAttribute="trailing" id="vvy-rJ-ITv"/>
                                             <constraint firstItem="Gqh-2v-hFb" firstAttribute="top" secondItem="wej-l0-t9x" secondAttribute="bottom" constant="67" id="vxW-oV-odY"/>
                                             <constraint firstItem="s5f-0f-je0" firstAttribute="leading" secondItem="QFS-dd-tDA" secondAttribute="leading" constant="27" id="wUb-ob-J8R"/>
                                             <constraint firstItem="s5f-0f-je0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="s3M-VZ-qg7" secondAttribute="leading" id="wjV-UA-iGp"/>
@@ -293,6 +304,7 @@
                     <navigationItem key="navigationItem" title="FunFlow" id="hEK-Wj-BBi"/>
                     <connections>
                         <outlet property="RatingEditLabel" destination="5kq-xF-GjD" id="IVW-Gc-HF0"/>
+                        <outlet property="addTaskButton" destination="AOu-IR-nZE" id="lX5-qc-HLr"/>
                         <outlet property="authorField" destination="DNr-ry-1l5" id="spF-VS-84b"/>
                         <outlet property="authorFieldLabel" destination="dGu-aD-bQs" id="8bT-XA-TU6"/>
                         <outlet property="browseImageButton" destination="s3M-VZ-qg7" id="UKm-KL-FGE"/>
