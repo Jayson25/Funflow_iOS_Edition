@@ -1,16 +1,22 @@
 PODS:
   - BEMCheckBox (1.4.1)
+  - SQLite.swift (0.11.5):
+    - SQLite.swift/standard (= 0.11.5)
+  - SQLite.swift/standard (0.11.5)
 
 DEPENDENCIES:
   - BEMCheckBox
+  - SQLite.swift (~> 0.11.5)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - BEMCheckBox
+    - SQLite.swift
 
 SPEC CHECKSUMS:
   BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
+  SQLite.swift: 6e5356850bb1791459f8c16d6ee9195b28714a2e
 
-PODFILE CHECKSUM: d3c35c73e0f73c844e646bf69b429303bbefa4c7
+PODFILE CHECKSUM: 124d7b58a033d30a8091fd31f111ad6fab112e14
 
 COCOAPODS: 1.5.3

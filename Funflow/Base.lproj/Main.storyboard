@@ -33,7 +33,7 @@
         <!--Insert new card-->
         <scene sceneID="uw9-Sw-pnu">
             <objects>
-                <viewController title="Insert new card" id="Ad5-3G-TBW" customClass="AddCardViewController" customModule="Funflow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Insert new card" id="Ad5-3G-TBW" customClass="FlowFormViewController" customModule="Funflow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="clc-Z3-Qxn">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,12 +57,12 @@
                                                     <constraint firstAttribute="width" constant="250" id="UyE-i5-E1Z"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZy-qR-TYY">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZy-qR-TYY" customClass="FieldLabel" customModule="Funflow" customModuleProvider="target">
                                                 <rect key="frame" x="459" y="197" width="125" height="24"/>
                                                 <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gCI-ve-frb">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gCI-ve-frb" customClass="TextFieldLayout" customModule="Funflow" customModuleProvider="target">
                                                 <rect key="frame" x="594" y="191" width="200" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -71,7 +71,7 @@
                                                     <action selector="categoryEditing:" destination="Ad5-3G-TBW" eventType="editingDidBegin" id="fjj-Ap-gLt"/>
                                                 </connections>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGu-aD-bQs">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGu-aD-bQs" customClass="FieldLabel" customModule="Funflow" customModuleProvider="target">
                                                 <rect key="frame" x="459" y="256" width="125" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="pEl-zX-TIW"/>
@@ -79,13 +79,13 @@
                                                 <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DNr-ry-1l5">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DNr-ry-1l5" customClass="TextFieldLayout" customModule="Funflow" customModuleProvider="target">
                                                 <rect key="frame" x="594" y="253" width="200" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5cS-uh-vxv">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5cS-uh-vxv" customClass="TextFieldLayout" customModule="Funflow" customModuleProvider="target">
                                                 <rect key="frame" x="594" y="303" width="200" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -94,12 +94,12 @@
                                                     <action selector="releaseDateEditing:" destination="Ad5-3G-TBW" eventType="editingDidBegin" id="Spt-gJ-aER"/>
                                                 </connections>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqk-mV-EQh">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqk-mV-EQh" customClass="FieldLabel" customModule="Funflow" customModuleProvider="target">
                                                 <rect key="frame" x="459" y="315" width="125" height="24"/>
                                                 <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dkR-hq-s5B">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dkR-hq-s5B" customClass="TextFieldLayout" customModule="Funflow" customModuleProvider="target">
                                                 <rect key="frame" x="594" y="136" width="200" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -113,7 +113,7 @@
                                                     <action selector="chooseImageAction:" destination="Ad5-3G-TBW" eventType="touchUpInside" id="JuR-oy-Vng"/>
                                                 </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9o-f5-jtL" customClass="CosmosView" customModule="Funflow">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R9o-f5-jtL" customClass="CosmosView" customModule="Funflow">
                                                 <rect key="frame" x="594" y="360" width="120" height="20"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
@@ -131,12 +131,12 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kq-xF-GjD">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kq-xF-GjD" customClass="FieldLabel" customModule="Funflow" customModuleProvider="target">
                                                 <rect key="frame" x="459" y="371" width="125" height="24"/>
                                                 <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5f-0f-je0">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5f-0f-je0" customClass="FieldLabel" customModule="Funflow" customModuleProvider="target">
                                                 <rect key="frame" x="27" y="494" width="125" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="Aqf-Qd-41m"/>
@@ -144,7 +144,7 @@
                                                 <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hv3-XR-yP8">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hv3-XR-yP8" customClass="FieldLabel" customModule="Funflow" customModuleProvider="target">
                                                 <rect key="frame" x="27" y="856" width="43" height="30"/>
                                                 <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
@@ -184,7 +184,7 @@
                                                     <action selector="saveFlowAction:" destination="Ad5-3G-TBW" eventType="touchUpInside" id="sWQ-Jh-39s"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gqh-2v-hFb">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gqh-2v-hFb" customClass="FieldLabel" customModule="Funflow" customModuleProvider="target">
                                                 <rect key="frame" x="459" y="139" width="127" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="127" id="kH8-hC-RSe"/>
@@ -213,7 +213,7 @@
                                                 <rect key="frame" x="764" y="856" width="30" height="30"/>
                                                 <state key="normal" title="Add"/>
                                                 <connections>
-                                                    <action selector="addTasskAction:" destination="Ad5-3G-TBW" eventType="touchUpInside" id="83X-fe-Vrv"/>
+                                                    <action selector="addTaskAction:" destination="Ad5-3G-TBW" eventType="touchUpInside" id="eTA-Hj-spV"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -353,7 +353,7 @@
         <!--FunFlow-->
         <scene sceneID="Cmr-0a-ohl">
             <objects>
-                <collectionViewController id="9CP-3v-Ms0" customClass="CategoryCollectionViewController" customModule="Funflow" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="mainMenu" id="9CP-3v-Ms0" customClass="MainMenuViewController" customModule="Funflow" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="fiy-yD-gTB">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -371,46 +371,7 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtg-Ky-Y6I">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
-                                            <connections>
-                                                <action selector="onClick:" destination="NRn-gW-M9W" eventType="touchUpInside" id="f7c-qr-hmm"/>
-                                                <segue destination="6OS-mm-V0c" kind="show" id="qd7-cU-AMU"/>
-                                            </connections>
-                                        </button>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MB5-KP-kkD">
-                                            <rect key="frame" x="7" y="43" width="186" height="122"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="122" id="OgW-bb-ZSd"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYV-V0-tBC">
-                                            <rect key="frame" x="5" y="185" width="190" height="10"/>
-                                            <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
                                 </view>
-                                <constraints>
-                                    <constraint firstItem="wtg-Ky-Y6I" firstAttribute="width" secondItem="NRn-gW-M9W" secondAttribute="width" id="2mi-hT-t6v"/>
-                                    <constraint firstItem="wtg-Ky-Y6I" firstAttribute="centerX" secondItem="cYV-V0-tBC" secondAttribute="centerX" id="68z-sZ-gRt"/>
-                                    <constraint firstAttribute="bottom" secondItem="cYV-V0-tBC" secondAttribute="bottom" constant="5" id="80F-r9-Zzx"/>
-                                    <constraint firstItem="MB5-KP-kkD" firstAttribute="leading" secondItem="NRn-gW-M9W" secondAttribute="leadingMargin" constant="-1" id="EM5-L6-R5l"/>
-                                    <constraint firstItem="MB5-KP-kkD" firstAttribute="top" secondItem="NRn-gW-M9W" secondAttribute="topMargin" constant="15" id="LpS-z1-a0N"/>
-                                    <constraint firstItem="wtg-Ky-Y6I" firstAttribute="height" secondItem="NRn-gW-M9W" secondAttribute="height" id="QF8-u9-7Fe"/>
-                                    <constraint firstAttribute="trailing" secondItem="cYV-V0-tBC" secondAttribute="trailing" constant="5" id="YFt-2w-eqf"/>
-                                    <constraint firstItem="cYV-V0-tBC" firstAttribute="centerX" secondItem="MB5-KP-kkD" secondAttribute="centerX" id="aAf-TC-ls0"/>
-                                    <constraint firstItem="MB5-KP-kkD" firstAttribute="centerX" secondItem="NRn-gW-M9W" secondAttribute="centerX" id="d9O-g1-rWC"/>
-                                    <constraint firstItem="cYV-V0-tBC" firstAttribute="top" secondItem="MB5-KP-kkD" secondAttribute="bottom" constant="20" id="uaQ-U6-CvK"/>
-                                    <constraint firstItem="wtg-Ky-Y6I" firstAttribute="top" secondItem="NRn-gW-M9W" secondAttribute="top" id="xcU-pE-fUy"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="buttonZone" destination="wtg-Ky-Y6I" id="Lqn-nV-sRL"/>
-                                    <outlet property="categoryIcon" destination="MB5-KP-kkD" id="l4A-pl-bXN"/>
-                                    <outlet property="categoryTitle" destination="cYV-V0-tBC" id="DSm-an-qQK"/>
-                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -424,28 +385,28 @@
             </objects>
             <point key="canvasLocation" x="2558.2733812949641" y="133.81294964028777"/>
         </scene>
-        <!--List Of Cards-->
+        <!--List Of Flows View Controller Decrepated-->
         <scene sceneID="thA-SR-Prc">
             <objects>
-                <tableViewController id="6OS-mm-V0c" customClass="ListOfCards" customModule="Funflow" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="133" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uYu-X2-qxX">
+                <tableViewController storyboardIdentifier="listOfFlows" id="6OS-mm-V0c" customClass="ListOfFlowsViewControllerDecrepated" customModule="Funflow" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="123" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uYu-X2-qxX">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="flowRow" rowHeight="133" id="Tv1-rB-idi" customClass="CardCell" customModule="Funflow" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="834" height="133"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="flowRow" rowHeight="123" id="Tv1-rB-idi" customClass="FlowCell" customModule="Funflow" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="834" height="123"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tv1-rB-idi" id="l4N-cr-aiM" customClass="CardCell" customModule="Funflow" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="834" height="132.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tv1-rB-idi" id="l4N-cr-aiM" customClass="FlowCell" customModule="Funflow" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="834" height="122.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NNk-c0-i0Z">
-                                            <rect key="frame" x="0.0" y="0.0" width="134" height="133"/>
+                                            <rect key="frame" x="-1" y="-1" width="123" height="124.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fty-f7-eyK">
-                                            <rect key="frame" x="172" y="51" width="42" height="30"/>
+                                            <rect key="frame" x="150" y="40" width="664" height="42"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -467,7 +428,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWh-bc-8oX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3392.96875" y="133.59375"/>
+            <point key="canvasLocation" x="3392.8057553956837" y="133.27338129496403"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="XAu-Pg-rVs">

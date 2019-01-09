@@ -9,9 +9,16 @@
 import UIKit
 
 class Task{
-    private var flowID : Int!
-    private var description : String!
-    private var isDone : Bool!
+    private var _flowID : Int!
+    
+    var flowID : Int!{
+        get{
+            return self._flowID
+        }
+    }
+    
+    var description : String!
+    var isDone : Bool!
     
     public init(){
         self.description = ""
@@ -19,33 +26,8 @@ class Task{
     }
     
     public init(flowID : Int, description : String, isDone : Bool){
-        self.flowID = flowID
+        self._flowID = flowID
         self.description = description
         self.isDone = isDone
-    }
-    
-    
-    public func getFlowID() -> Int{
-        return self.flowID
-    }
-    
-    public func getDescription() -> String{
-        return self.description
-    }
-    
-    public func isItDone() -> Bool{
-        return self.isDone
-    }
-    
-    public func setFlowID(_ flowID : Int){
-        self.flowID = flowID
-    }
-    
-    public func setDescription(_ description : String){
-        self.description = description
-    }
-    
-    public func setDone(_ done : Bool){
-        self.isDone = done
     }
 }

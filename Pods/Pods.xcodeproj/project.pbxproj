@@ -7,30 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		160B28C75D434CD2C52DEE1760C8D8BD /* BEMCheckBox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A4544D3633D06CBE658011C41CF98176 /* BEMCheckBox-dummy.m */; };
-		2B7261AB881EDD8430D190AB62D58C59 /* BEMCheckBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 72992B4F680944A95012F676101D0842 /* BEMCheckBox.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2E260B55818E6B32298C21C3E556EF98 /* BEMCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F45403B1B3A5FB6318535BCC9C1C37E /* BEMCheckBox.m */; };
+		041F7A3BF9A7DDA80E0D9B800AE43F0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		0A90246CE13A8EA512006658889EF4D8 /* Collation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70292A6707ED036AFBB7987290885544 /* Collation.swift */; };
+		0BA28D01CF1C9A55662BAF3CDB51CB10 /* Blob.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD184D55DBC4984F14F1321940DEDDC5 /* Blob.swift */; };
+		1144A4D08E0105361B9103E120270ED1 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36B2BEA04314F3290A0821A0E3193D8 /* Operators.swift */; };
+		160B28C75D434CD2C52DEE1760C8D8BD /* BEMCheckBox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D34500BFFCDEB21B360AE8AE3DB07165 /* BEMCheckBox-dummy.m */; };
+		16CD45C4D7DE1EDBC9B22DF0D0A9CB8A /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265F32F73598DCCE61CDB68DFD740E5A /* Errors.swift */; };
+		1B34C73EE404C9AFECF3464C699F0654 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03426B583FAD111B202EEA1D8F3D103 /* Expression.swift */; };
+		1DB09721D9C9CD6BB8E468E6F80F7F40 /* SQLite.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D888D528B86B452C582CE54C1D9D10E3 /* SQLite.swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FACE9058B3AADCB72A01D612E73C6A1 /* Pods-Funflow-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FA270FEC83503AB70187DC50D144BED2 /* Pods-Funflow-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2109588ED16D131DAF4DCB31BADC7741 /* fts3_tokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FB16D02B44182E2AC51ECD725536DD5 /* fts3_tokenizer.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		249BE46621EFD3D4A82565EF9AB1DF06 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B0A9BC3C9523B675C5843A89D8DBB6 /* Connection.swift */; };
+		28AA226E04CBDAF0F06D6601BEC67B36 /* SQLite.h in Headers */ = {isa = PBXBuildFile; fileRef = AEA5428B8C9F040A3B5B9DC939048A75 /* SQLite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B7261AB881EDD8430D190AB62D58C59 /* BEMCheckBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 54752EC948B3AF2C4AEA518DE6E1D531 /* BEMCheckBox.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BDD8A4D1ECF45B111A814A1D166D97B /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D4FD8979CE6862FC9476305888FED /* Statement.swift */; };
+		2E260B55818E6B32298C21C3E556EF98 /* BEMCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = A2368BDD23E0D85BDE54302D04327499 /* BEMCheckBox.m */; };
+		3027BFF63FA0B9DAD90D18DABF3C893E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		35EAD6048ACF5B9BB441B6DBD53B4BE9 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5917FA7FD6ACEF0D137E4E162FF513A /* Helpers.swift */; };
 		3676F08333878303A290EBD834CD06FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		3677F86D9135EABC338D241C2706C73B /* Pods-Funflow-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FA270FEC83503AB70187DC50D144BED2 /* Pods-Funflow-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A9CE2C396BA4442CC99AF2D0CD5FF52 /* Pods-FunflowUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6DC08CC6EC72D162A9C52965471F2D /* Pods-FunflowUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF7EC6E471671407A981B2D39D3FC95 /* SQLite-Bridging.h in Headers */ = {isa = PBXBuildFile; fileRef = C0D17CAE48E272E67CE56BB7ACDE62B7 /* SQLite-Bridging.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53147E0B29CA41E38A1030215EB10890 /* CoreFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA72B0533D475FFEDE8D763CB094E45E /* CoreFunctions.swift */; };
 		5A7700C9E89A2CA37B63AD8D034719EB /* Pods-FunflowUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA32721C9C136EDE8F1A8A95C71081 /* Pods-FunflowUITests-dummy.m */; };
-		5B32F3F091530FF033F8982ACF0BEA29 /* BEMPathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C218190EA344147A5D8BFA887AFD3D /* BEMPathManager.m */; };
-		6352AFD061B7E06A2C811A8DDFEFBEC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		7D889EB19290493EB8B4AC6DD7591C75 /* BEMCheckBoxGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 85133DF009098E372F26D318EEE30A41 /* BEMCheckBoxGroup.m */; };
-		871C17723D819803AA7900ADC1624DF1 /* BEMPathManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 800E05303A2A439EBDA85A7B0E2BA897 /* BEMPathManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B32F3F091530FF033F8982ACF0BEA29 /* BEMPathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B045A1774BC1671D50470B93EE95824 /* BEMPathManager.m */; };
+		5EFAD2D7042D4B0FDB8961728818176E /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA0BC9EF5F6C156BC088E7D6A1811C8 /* Schema.swift */; };
+		63E99CA833A47053D8525F68CF8E9341 /* FTS4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B825BC43E9D8CAA69FB316F91DFDB68 /* FTS4.swift */; };
+		6AD0ACA5C1C6882421004003A6EEF171 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844547E9ED6B91585AFD54CF060C7182 /* Value.swift */; };
+		6FB182A54A5E91193ECBEE35EE9B4E4F /* FTS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C3222434CED16917CBCEA914009703 /* FTS5.swift */; };
+		763F7A84550F70B554FFA8BC943348E7 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3A8A361A18CD55F0F07A78BF385EBC /* Query.swift */; };
+		7D889EB19290493EB8B4AC6DD7591C75 /* BEMCheckBoxGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E9E82F28FF62375B17FC725C8AA5BC /* BEMCheckBoxGroup.m */; };
+		7E6479F8F310D6963CC56902A1EF3E19 /* CustomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2190260F0D22EDC102849EDD3D0D2A /* CustomFunctions.swift */; };
+		84E4E944B71746C05E45E3AC1A5DF1C9 /* Setter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECC1CF0AF21FE222B6596C420F2C64B /* Setter.swift */; };
+		871C17723D819803AA7900ADC1624DF1 /* BEMPathManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B2CC4619397C9C5855B8588309FF990 /* BEMPathManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A93BA86888B8A5B0308647AED684A42 /* Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6085FA43AC628399281FD30E51D08A48 /* Coding.swift */; };
 		8C516317C9A0468A2100CAB9B50E155C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 		93A5A3D2AAE0ADDDD53BA251D48EC922 /* Pods-FunflowTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 130E963CE60C1B7D11E6B8FAB9D6640B /* Pods-FunflowTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A4A7E204460A4C6BBEA30F9CF34B6940 /* Pods-FunflowTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DCD37F94DEB1EEFF10ED350CE85BE4 /* Pods-FunflowTests-dummy.m */; };
-		C569DBF903736327A6EBB4809D8B5169 /* BEMCheckBox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BEF146DDC9ECDA0F7459ECD1728E3E3F /* BEMCheckBox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D015B21B7FDFD7E02CF568E2D0A0C5F2 /* BEMAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D6FFE7770D898B2E1B45032083394 /* BEMAnimationManager.m */; };
-		E7F6DBBE845AB8B59D9DD4131AD59344 /* Pods-Funflow-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BB254EA530D5CB52C2FC1B14762FA6F5 /* Pods-Funflow-dummy.m */; };
+		BB3EEC6094E1B58BCD4AE4A7286D91AD /* Pods-Funflow-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BB254EA530D5CB52C2FC1B14762FA6F5 /* Pods-Funflow-dummy.m */; };
+		C569DBF903736327A6EBB4809D8B5169 /* BEMCheckBox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DB3495A94C17A929F871CA6800A67CA5 /* BEMCheckBox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D015B21B7FDFD7E02CF568E2D0A0C5F2 /* BEMAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EECBE668378E548D50D2A22145F0C000 /* BEMAnimationManager.m */; };
+		D737E40C30DDB6402169F5F040661422 /* DateAndTimeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FB0E084D23AC07CC5C2EF037449E58 /* DateAndTimeFunctions.swift */; };
+		E0D25904A14020759CB6FE52CD507CDA /* AggregateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7584241AB567422EC53A1D4CB36DFAF4 /* AggregateFunctions.swift */; };
 		EC03E5EF2DF6F6A8AD97A044EE419C0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		F62BBD5C1FFDAF0B944E04435E7BF896 /* BEMCheckBoxGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 30EB2C32A1386B27CD9A296CCAF35A6B /* BEMCheckBoxGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FC53AA980AFE7ED3FDF191F460AD6BA8 /* BEMAnimationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 95888DAFC2687E598244FE38FFC00252 /* BEMAnimationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3E45DB43057B118A43110E45BA38569 /* SQLite.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46069D30AB168B18B1E1FB1D405A3C3B /* SQLite.swift-dummy.m */; };
+		F40356FF4E641F6AF6D52A8235CEE801 /* RTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415BE9D888E363C68180BE4F4B009A3C /* RTree.swift */; };
+		F62BBD5C1FFDAF0B944E04435E7BF896 /* BEMCheckBoxGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = B30DD9417E14FACBE9955E33D8AD95AB /* BEMCheckBoxGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F960FA79CE3600BF7B922EAED6EFA395 /* SQLite-Bridging.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A17581BA20E7074FC198A3E3CD09D7C /* SQLite-Bridging.m */; };
+		FC53AA980AFE7ED3FDF191F460AD6BA8 /* BEMAnimationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E05BB5FEDE9DFC5478325C40C6830C10 /* BEMAnimationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD9FC3FBED945BD81FE5283821FC8F49 /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AE5B44FE8855178E40BFE3ECC790FA /* Foundation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		345E8086DDFBD1296E998B7C8BCDF950 /* PBXContainerItemProxy */ = {
+		3052813A047D700931C7CF86081341DE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -41,77 +69,124 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 78F01C27BB4B700578070A3CA87F1ACC;
+			remoteGlobalIDString = 1F740C8E59EF319DA557011D77A8E743;
 			remoteInfo = "Pods-Funflow";
 		};
 		7F8AC947BB063290F89B78DA775627C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 78F01C27BB4B700578070A3CA87F1ACC;
+			remoteGlobalIDString = 1F740C8E59EF319DA557011D77A8E743;
 			remoteInfo = "Pods-Funflow";
+		};
+		C2367730DEE0211D9C6CA513158F3602 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 897DC4585DBF5CDB91ECF248A016E590;
+			remoteInfo = SQLite.swift;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		130E963CE60C1B7D11E6B8FAB9D6640B /* Pods-FunflowTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FunflowTests-umbrella.h"; sourceTree = "<group>"; };
 		13C6D671419CBC90F7A40C217A79A5FF /* Pods-FunflowTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FunflowTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		1B815E439AE7890589599ACF72BF4BF6 /* BEMCheckBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BEMCheckBox.framework; path = BEMCheckBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1DC403C1793E35554148499644656591 /* BEMCheckBox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BEMCheckBox-prefix.pch"; sourceTree = "<group>"; };
+		1B2CC4619397C9C5855B8588309FF990 /* BEMPathManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMPathManager.h; path = Classes/BEMPathManager.h; sourceTree = "<group>"; };
+		203814572816EF674A0DF53B411F40CE /* SQLite.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQLite.swift-prefix.pch"; sourceTree = "<group>"; };
+		24F9D86F2459DE4918CA079A82FBCA41 /* Pods_Funflow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Funflow.framework; path = "Pods-Funflow.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		258DFCF8B26A97B8B7A3C1601DA1885A /* Pods-Funflow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Funflow.debug.xcconfig"; sourceTree = "<group>"; };
-		26EADAA9293B32651D7BC218C90EDD3C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		265F32F73598DCCE61CDB68DFD740E5A /* Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = Sources/SQLite/Core/Errors.swift; sourceTree = "<group>"; };
 		2D2F815525345B85065D56B1150B6773 /* Pods-Funflow-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Funflow-acknowledgements.plist"; sourceTree = "<group>"; };
-		30EB2C32A1386B27CD9A296CCAF35A6B /* BEMCheckBoxGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMCheckBoxGroup.h; path = Classes/BEMCheckBoxGroup.h; sourceTree = "<group>"; };
-		31F50A7FC9EBC78909CB667E01EF30B9 /* BEMCheckBox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BEMCheckBox.modulemap; sourceTree = "<group>"; };
+		3386227F0DDAC4894498530C759D42F6 /* Pods_FunflowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FunflowUITests.framework; path = "Pods-FunflowUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3475601DE0821DF200D11FB4036F8D71 /* BEMCheckBox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BEMCheckBox.xcconfig; sourceTree = "<group>"; };
 		34D185BDE7F511840C048F7D9C66DFE8 /* Pods-FunflowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FunflowUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3905BD74EBD487878F33AD87A10435B5 /* SQLite.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SQLite.swift.modulemap; sourceTree = "<group>"; };
+		3A17581BA20E7074FC198A3E3CD09D7C /* SQLite-Bridging.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SQLite-Bridging.m"; path = "Sources/SQLiteObjc/SQLite-Bridging.m"; sourceTree = "<group>"; };
 		3B2FB6EC26D6005DD2E6931EBAD49473 /* Pods-FunflowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FunflowTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3B7A211C4DA64617ABC693C66CA7611F /* Pods-FunflowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FunflowTests.release.xcconfig"; sourceTree = "<group>"; };
 		3E86E13B1DA2AFF9493B373F0F6DBA9B /* Pods-Funflow-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Funflow-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3EAA32721C9C136EDE8F1A8A95C71081 /* Pods-FunflowUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FunflowUITests-dummy.m"; sourceTree = "<group>"; };
-		46C218190EA344147A5D8BFA887AFD3D /* BEMPathManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMPathManager.m; path = Classes/BEMPathManager.m; sourceTree = "<group>"; };
+		415BE9D888E363C68180BE4F4B009A3C /* RTree.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RTree.swift; path = Sources/SQLite/Extensions/RTree.swift; sourceTree = "<group>"; };
+		443E2DA2E5E783EE77F9FD8B4DD94725 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46069D30AB168B18B1E1FB1D405A3C3B /* SQLite.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SQLite.swift-dummy.m"; sourceTree = "<group>"; };
+		48E9E82F28FF62375B17FC725C8AA5BC /* BEMCheckBoxGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMCheckBoxGroup.m; path = Classes/BEMCheckBoxGroup.m; sourceTree = "<group>"; };
 		49CBE9504BFEE537D74F64D6EE37C8A1 /* Pods-FunflowTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FunflowTests-resources.sh"; sourceTree = "<group>"; };
 		4B2DA34D43B2D1D9FDEA909C6DC9C633 /* Pods-FunflowUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FunflowUITests-frameworks.sh"; sourceTree = "<group>"; };
-		5A9D6FFE7770D898B2E1B45032083394 /* BEMAnimationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMAnimationManager.m; path = Classes/BEMAnimationManager.m; sourceTree = "<group>"; };
-		5F45403B1B3A5FB6318535BCC9C1C37E /* BEMCheckBox.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMCheckBox.m; path = Classes/BEMCheckBox.m; sourceTree = "<group>"; };
+		4FB16D02B44182E2AC51ECD725536DD5 /* fts3_tokenizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fts3_tokenizer.h; path = Sources/SQLiteObjc/fts3_tokenizer.h; sourceTree = "<group>"; };
+		52A0692CBFCFD89F3850BA5AF6F4D897 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54752EC948B3AF2C4AEA518DE6E1D531 /* BEMCheckBox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMCheckBox.h; path = Classes/BEMCheckBox.h; sourceTree = "<group>"; };
+		566417C7066CD393B291A0B1D2019169 /* Pods_FunflowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FunflowTests.framework; path = "Pods-FunflowTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B6D4FD8979CE6862FC9476305888FED /* Statement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Statement.swift; path = Sources/SQLite/Core/Statement.swift; sourceTree = "<group>"; };
+		5E3A8A361A18CD55F0F07A78BF385EBC /* Query.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Query.swift; path = Sources/SQLite/Typed/Query.swift; sourceTree = "<group>"; };
+		6085FA43AC628399281FD30E51D08A48 /* Coding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coding.swift; path = Sources/SQLite/Typed/Coding.swift; sourceTree = "<group>"; };
 		61DBEE1901DCAFF644C300B087FF24CB /* Pods-Funflow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Funflow.release.xcconfig"; sourceTree = "<group>"; };
 		62911B91298C9FFB8C668327F5E30A77 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66B0A9BC3C9523B675C5843A89D8DBB6 /* Connection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Connection.swift; path = Sources/SQLite/Core/Connection.swift; sourceTree = "<group>"; };
 		6B473A41438385BA59127472FC069D18 /* Pods-FunflowTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FunflowTests.modulemap"; sourceTree = "<group>"; };
-		72992B4F680944A95012F676101D0842 /* BEMCheckBox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMCheckBox.h; path = Classes/BEMCheckBox.h; sourceTree = "<group>"; };
-		7314DF1E8F221D523B1797597CE658E6 /* Pods_Funflow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Funflow.framework; path = "Pods-Funflow.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		800E05303A2A439EBDA85A7B0E2BA897 /* BEMPathManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMPathManager.h; path = Classes/BEMPathManager.h; sourceTree = "<group>"; };
-		80268CB981492972DF4730ECAD735351 /* Pods_FunflowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FunflowUITests.framework; path = "Pods-FunflowUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		85133DF009098E372F26D318EEE30A41 /* BEMCheckBoxGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMCheckBoxGroup.m; path = Classes/BEMCheckBoxGroup.m; sourceTree = "<group>"; };
+		6CD808C0674593022AB156164F7E1DC6 /* BEMCheckBox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BEMCheckBox.modulemap; sourceTree = "<group>"; };
+		70292A6707ED036AFBB7987290885544 /* Collation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Collation.swift; path = Sources/SQLite/Typed/Collation.swift; sourceTree = "<group>"; };
+		7584241AB567422EC53A1D4CB36DFAF4 /* AggregateFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AggregateFunctions.swift; path = Sources/SQLite/Typed/AggregateFunctions.swift; sourceTree = "<group>"; };
+		75AE5B44FE8855178E40BFE3ECC790FA /* Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Foundation.swift; path = Sources/SQLite/Foundation.swift; sourceTree = "<group>"; };
+		7CA0BC9EF5F6C156BC088E7D6A1811C8 /* Schema.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Schema.swift; path = Sources/SQLite/Typed/Schema.swift; sourceTree = "<group>"; };
+		844547E9ED6B91585AFD54CF060C7182 /* Value.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Value.swift; path = Sources/SQLite/Core/Value.swift; sourceTree = "<group>"; };
 		890A8E5ECF9A0C491164454F149781A9 /* Pods-FunflowUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FunflowUITests-resources.sh"; sourceTree = "<group>"; };
+		8B045A1774BC1671D50470B93EE95824 /* BEMPathManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMPathManager.m; path = Classes/BEMPathManager.m; sourceTree = "<group>"; };
+		8B825BC43E9D8CAA69FB316F91DFDB68 /* FTS4.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS4.swift; path = Sources/SQLite/Extensions/FTS4.swift; sourceTree = "<group>"; };
+		8DFFEAFBBAEECB3F12AA8C63CAE72718 /* BEMCheckBox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BEMCheckBox-prefix.pch"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		94DCD37F94DEB1EEFF10ED350CE85BE4 /* Pods-FunflowTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FunflowTests-dummy.m"; sourceTree = "<group>"; };
-		95888DAFC2687E598244FE38FFC00252 /* BEMAnimationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMAnimationManager.h; path = Classes/BEMAnimationManager.h; sourceTree = "<group>"; };
 		9601F658031EE55744ABBD56A7A12787 /* Pods-FunflowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FunflowUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9EA757A8A63E2A7C6318E163B6441E38 /* Pods-Funflow-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Funflow-frameworks.sh"; sourceTree = "<group>"; };
-		A4544D3633D06CBE658011C41CF98176 /* BEMCheckBox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BEMCheckBox-dummy.m"; sourceTree = "<group>"; };
+		A0FB0E084D23AC07CC5C2EF037449E58 /* DateAndTimeFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateAndTimeFunctions.swift; path = Sources/SQLite/Typed/DateAndTimeFunctions.swift; sourceTree = "<group>"; };
+		A2368BDD23E0D85BDE54302D04327499 /* BEMCheckBox.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMCheckBox.m; path = Classes/BEMCheckBox.m; sourceTree = "<group>"; };
 		A81ABA74CDD5388BE056CB6C7B483EE7 /* Pods-FunflowTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FunflowTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A8C3222434CED16917CBCEA914009703 /* FTS5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS5.swift; path = Sources/SQLite/Extensions/FTS5.swift; sourceTree = "<group>"; };
 		A8C6D5D0C7B9474644BA7B1DB15E93CB /* Pods-Funflow-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Funflow-resources.sh"; sourceTree = "<group>"; };
+		AEA5428B8C9F040A3B5B9DC939048A75 /* SQLite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SQLite.h; path = Sources/SQLite/SQLite.h; sourceTree = "<group>"; };
 		AFFE15130BC2735D8E711F6CBFC191E3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B30DD9417E14FACBE9955E33D8AD95AB /* BEMCheckBoxGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMCheckBoxGroup.h; path = Classes/BEMCheckBoxGroup.h; sourceTree = "<group>"; };
 		BB254EA530D5CB52C2FC1B14762FA6F5 /* Pods-Funflow-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Funflow-dummy.m"; sourceTree = "<group>"; };
 		BC044AFE08FA18138D6C54663FFD8867 /* Pods-FunflowTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FunflowTests-frameworks.sh"; sourceTree = "<group>"; };
-		BEF146DDC9ECDA0F7459ECD1728E3E3F /* BEMCheckBox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BEMCheckBox-umbrella.h"; sourceTree = "<group>"; };
+		C0392C91C3016AA3CE34C5862CF82870 /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SQLite.framework; path = SQLite.swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0D17CAE48E272E67CE56BB7ACDE62B7 /* SQLite-Bridging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SQLite-Bridging.h"; path = "Sources/SQLiteObjc/include/SQLite-Bridging.h"; sourceTree = "<group>"; };
 		C1D34DF8F2D7CAAABB502399730B8C7A /* Pods-FunflowUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FunflowUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C31345882807CD034D48106589C212B0 /* SQLite.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SQLite.swift.xcconfig; sourceTree = "<group>"; };
+		C5917FA7FD6ACEF0D137E4E162FF513A /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = Sources/SQLite/Helpers.swift; sourceTree = "<group>"; };
 		C8870C884C746CA87A96EE9180D90D94 /* Pods-FunflowUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FunflowUITests.modulemap"; sourceTree = "<group>"; };
 		CA0292E524D57D8E4FFF11417779A595 /* Pods-Funflow.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Funflow.modulemap"; sourceTree = "<group>"; };
+		CC2190260F0D22EDC102849EDD3D0D2A /* CustomFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomFunctions.swift; path = Sources/SQLite/Typed/CustomFunctions.swift; sourceTree = "<group>"; };
+		CECC1CF0AF21FE222B6596C420F2C64B /* Setter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Setter.swift; path = Sources/SQLite/Typed/Setter.swift; sourceTree = "<group>"; };
+		D34500BFFCDEB21B360AE8AE3DB07165 /* BEMCheckBox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BEMCheckBox-dummy.m"; sourceTree = "<group>"; };
 		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D888D528B86B452C582CE54C1D9D10E3 /* SQLite.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQLite.swift-umbrella.h"; sourceTree = "<group>"; };
+		DA078ADEF37BA9D8E3F0B11FD78BE7D4 /* BEMCheckBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BEMCheckBox.framework; path = BEMCheckBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA72B0533D475FFEDE8D763CB094E45E /* CoreFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreFunctions.swift; path = Sources/SQLite/Typed/CoreFunctions.swift; sourceTree = "<group>"; };
+		DB3495A94C17A929F871CA6800A67CA5 /* BEMCheckBox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BEMCheckBox-umbrella.h"; sourceTree = "<group>"; };
 		DD6DC08CC6EC72D162A9C52965471F2D /* Pods-FunflowUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FunflowUITests-umbrella.h"; sourceTree = "<group>"; };
-		F2E27EF2BE32DEC527206DC1DEF591E3 /* Pods_FunflowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FunflowTests.framework; path = "Pods-FunflowTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E03426B583FAD111B202EEA1D8F3D103 /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Sources/SQLite/Typed/Expression.swift; sourceTree = "<group>"; };
+		E05BB5FEDE9DFC5478325C40C6830C10 /* BEMAnimationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMAnimationManager.h; path = Classes/BEMAnimationManager.h; sourceTree = "<group>"; };
+		E36B2BEA04314F3290A0821A0E3193D8 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Sources/SQLite/Typed/Operators.swift; sourceTree = "<group>"; };
+		EECBE668378E548D50D2A22145F0C000 /* BEMAnimationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMAnimationManager.m; path = Classes/BEMAnimationManager.m; sourceTree = "<group>"; };
 		F3CB08C77F0D26279DB6E1230B9C4271 /* Pods-FunflowUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FunflowUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		FA270FEC83503AB70187DC50D144BED2 /* Pods-Funflow-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Funflow-umbrella.h"; sourceTree = "<group>"; };
-		FB986AC2221525ED26F6AC1917120E2B /* BEMCheckBox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BEMCheckBox.xcconfig; sourceTree = "<group>"; };
+		FD184D55DBC4984F14F1321940DEDDC5 /* Blob.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Blob.swift; path = Sources/SQLite/Core/Blob.swift; sourceTree = "<group>"; };
 		FFC0E420B8B761836685835818DE1FFE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9DD05BDDDA43C3D48453E6896F3893C8 /* Frameworks */ = {
+		1F99CCE878A4F3FD1336ED065DC3A89C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6352AFD061B7E06A2C811A8DDFEFBEC9 /* Foundation.framework in Frameworks */,
+				041F7A3BF9A7DDA80E0D9B800AE43F0D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		675DC22A28CFBDE6DEFFF32A50BB2E1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3027BFF63FA0B9DAD90D18DABF3C893E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,15 +217,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		30804915C87E29272FE4D55D7E8B488B /* Products */ = {
+		194E13360A43CC635C30AF4AD931F683 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1B815E439AE7890589599ACF72BF4BF6 /* BEMCheckBox.framework */,
-				7314DF1E8F221D523B1797597CE658E6 /* Pods_Funflow.framework */,
-				F2E27EF2BE32DEC527206DC1DEF591E3 /* Pods_FunflowTests.framework */,
-				80268CB981492972DF4730ECAD735351 /* Pods_FunflowUITests.framework */,
+				443E2DA2E5E783EE77F9FD8B4DD94725 /* Info.plist */,
+				3905BD74EBD487878F33AD87A10435B5 /* SQLite.swift.modulemap */,
+				C31345882807CD034D48106589C212B0 /* SQLite.swift.xcconfig */,
+				46069D30AB168B18B1E1FB1D405A3C3B /* SQLite.swift-dummy.m */,
+				203814572816EF674A0DF53B411F40CE /* SQLite.swift-prefix.pch */,
+				D888D528B86B452C582CE54C1D9D10E3 /* SQLite.swift-umbrella.h */,
 			);
-			name = Products;
+			name = "Support Files";
+			path = "../Target Support Files/SQLite.swift";
+			sourceTree = "<group>";
+		};
+		3A405EB887FEF62450121981BCCEDA1A /* standard */ = {
+			isa = PBXGroup;
+			children = (
+				7584241AB567422EC53A1D4CB36DFAF4 /* AggregateFunctions.swift */,
+				FD184D55DBC4984F14F1321940DEDDC5 /* Blob.swift */,
+				6085FA43AC628399281FD30E51D08A48 /* Coding.swift */,
+				70292A6707ED036AFBB7987290885544 /* Collation.swift */,
+				66B0A9BC3C9523B675C5843A89D8DBB6 /* Connection.swift */,
+				DA72B0533D475FFEDE8D763CB094E45E /* CoreFunctions.swift */,
+				CC2190260F0D22EDC102849EDD3D0D2A /* CustomFunctions.swift */,
+				A0FB0E084D23AC07CC5C2EF037449E58 /* DateAndTimeFunctions.swift */,
+				265F32F73598DCCE61CDB68DFD740E5A /* Errors.swift */,
+				E03426B583FAD111B202EEA1D8F3D103 /* Expression.swift */,
+				75AE5B44FE8855178E40BFE3ECC790FA /* Foundation.swift */,
+				4FB16D02B44182E2AC51ECD725536DD5 /* fts3_tokenizer.h */,
+				8B825BC43E9D8CAA69FB316F91DFDB68 /* FTS4.swift */,
+				A8C3222434CED16917CBCEA914009703 /* FTS5.swift */,
+				C5917FA7FD6ACEF0D137E4E162FF513A /* Helpers.swift */,
+				E36B2BEA04314F3290A0821A0E3193D8 /* Operators.swift */,
+				5E3A8A361A18CD55F0F07A78BF385EBC /* Query.swift */,
+				415BE9D888E363C68180BE4F4B009A3C /* RTree.swift */,
+				7CA0BC9EF5F6C156BC088E7D6A1811C8 /* Schema.swift */,
+				CECC1CF0AF21FE222B6596C420F2C64B /* Setter.swift */,
+				AEA5428B8C9F040A3B5B9DC939048A75 /* SQLite.h */,
+				C0D17CAE48E272E67CE56BB7ACDE62B7 /* SQLite-Bridging.h */,
+				3A17581BA20E7074FC198A3E3CD09D7C /* SQLite-Bridging.m */,
+				5B6D4FD8979CE6862FC9476305888FED /* Statement.swift */,
+				844547E9ED6B91585AFD54CF060C7182 /* Value.swift */,
+			);
+			name = standard;
 			sourceTree = "<group>";
 		};
 		42A5799A10A12038B1D37E1E6703969D /* Pods-FunflowUITests */ = {
@@ -197,21 +307,13 @@
 			path = "Target Support Files/Pods-Funflow";
 			sourceTree = "<group>";
 		};
-		5CE42A374405CA158840C3FD42789760 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E034460AA9CDBF42F96C53D6E5F49AE1 /* BEMCheckBox */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				5CE42A374405CA158840C3FD42789760 /* Pods */,
-				30804915C87E29272FE4D55D7E8B488B /* Products */,
+				F1713B4B75E0D2A0723531A0F903B4AA /* Pods */,
+				BDC2174D551AACD91EFA85416EBB56D3 /* Products */,
 				9119D888838049959ED9B995FCC2BD4E /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -244,6 +346,37 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		ABE15C1D1C3768FE73793888F6351F9C /* BEMCheckBox */ = {
+			isa = PBXGroup;
+			children = (
+				E05BB5FEDE9DFC5478325C40C6830C10 /* BEMAnimationManager.h */,
+				EECBE668378E548D50D2A22145F0C000 /* BEMAnimationManager.m */,
+				54752EC948B3AF2C4AEA518DE6E1D531 /* BEMCheckBox.h */,
+				A2368BDD23E0D85BDE54302D04327499 /* BEMCheckBox.m */,
+				B30DD9417E14FACBE9955E33D8AD95AB /* BEMCheckBoxGroup.h */,
+				48E9E82F28FF62375B17FC725C8AA5BC /* BEMCheckBoxGroup.m */,
+				1B2CC4619397C9C5855B8588309FF990 /* BEMPathManager.h */,
+				8B045A1774BC1671D50470B93EE95824 /* BEMPathManager.m */,
+				AD9C4F9E639EAA6889AFD1AD2FBAC0E7 /* Support Files */,
+			);
+			name = BEMCheckBox;
+			path = BEMCheckBox;
+			sourceTree = "<group>";
+		};
+		AD9C4F9E639EAA6889AFD1AD2FBAC0E7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6CD808C0674593022AB156164F7E1DC6 /* BEMCheckBox.modulemap */,
+				3475601DE0821DF200D11FB4036F8D71 /* BEMCheckBox.xcconfig */,
+				D34500BFFCDEB21B360AE8AE3DB07165 /* BEMCheckBox-dummy.m */,
+				8DFFEAFBBAEECB3F12AA8C63CAE72718 /* BEMCheckBox-prefix.pch */,
+				DB3495A94C17A929F871CA6800A67CA5 /* BEMCheckBox-umbrella.h */,
+				52A0692CBFCFD89F3850BA5AF6F4D897 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BEMCheckBox";
+			sourceTree = "<group>";
+		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,48 +385,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E034460AA9CDBF42F96C53D6E5F49AE1 /* BEMCheckBox */ = {
+		BDC2174D551AACD91EFA85416EBB56D3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				95888DAFC2687E598244FE38FFC00252 /* BEMAnimationManager.h */,
-				5A9D6FFE7770D898B2E1B45032083394 /* BEMAnimationManager.m */,
-				72992B4F680944A95012F676101D0842 /* BEMCheckBox.h */,
-				5F45403B1B3A5FB6318535BCC9C1C37E /* BEMCheckBox.m */,
-				30EB2C32A1386B27CD9A296CCAF35A6B /* BEMCheckBoxGroup.h */,
-				85133DF009098E372F26D318EEE30A41 /* BEMCheckBoxGroup.m */,
-				800E05303A2A439EBDA85A7B0E2BA897 /* BEMPathManager.h */,
-				46C218190EA344147A5D8BFA887AFD3D /* BEMPathManager.m */,
-				E6FBF93C9E566B08EBBA1EFC899A6E62 /* Support Files */,
+				DA078ADEF37BA9D8E3F0B11FD78BE7D4 /* BEMCheckBox.framework */,
+				24F9D86F2459DE4918CA079A82FBCA41 /* Pods_Funflow.framework */,
+				566417C7066CD393B291A0B1D2019169 /* Pods_FunflowTests.framework */,
+				3386227F0DDAC4894498530C759D42F6 /* Pods_FunflowUITests.framework */,
+				C0392C91C3016AA3CE34C5862CF82870 /* SQLite.framework */,
 			);
-			name = BEMCheckBox;
-			path = BEMCheckBox;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		E6FBF93C9E566B08EBBA1EFC899A6E62 /* Support Files */ = {
+		C3EB43B7766F750924D55A2BB7A64026 /* SQLite.swift */ = {
 			isa = PBXGroup;
 			children = (
-				31F50A7FC9EBC78909CB667E01EF30B9 /* BEMCheckBox.modulemap */,
-				FB986AC2221525ED26F6AC1917120E2B /* BEMCheckBox.xcconfig */,
-				A4544D3633D06CBE658011C41CF98176 /* BEMCheckBox-dummy.m */,
-				1DC403C1793E35554148499644656591 /* BEMCheckBox-prefix.pch */,
-				BEF146DDC9ECDA0F7459ECD1728E3E3F /* BEMCheckBox-umbrella.h */,
-				26EADAA9293B32651D7BC218C90EDD3C /* Info.plist */,
+				3A405EB887FEF62450121981BCCEDA1A /* standard */,
+				194E13360A43CC635C30AF4AD931F683 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/BEMCheckBox";
+			name = SQLite.swift;
+			path = SQLite.swift;
+			sourceTree = "<group>";
+		};
+		F1713B4B75E0D2A0723531A0F903B4AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ABE15C1D1C3768FE73793888F6351F9C /* BEMCheckBox */,
+				C3EB43B7766F750924D55A2BB7A64026 /* SQLite.swift */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		08015A045FA1C91A9EDBDAE4023E78B9 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3677F86D9135EABC338D241C2706C73B /* Pods-Funflow-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		099C9FA98E5AD24AD177CEC6DA3657D1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -303,6 +428,25 @@
 				2B7261AB881EDD8430D190AB62D58C59 /* BEMCheckBox.h in Headers */,
 				F62BBD5C1FFDAF0B944E04435E7BF896 /* BEMCheckBoxGroup.h in Headers */,
 				871C17723D819803AA7900ADC1624DF1 /* BEMPathManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DB69C6A14091B741A544F9FEC190D99 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FACE9058B3AADCB72A01D612E73C6A1 /* Pods-Funflow-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88DD77107E5AB9439E004563C7D05F0D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2109588ED16D131DAF4DCB31BADC7741 /* fts3_tokenizer.h in Headers */,
+				3BF7EC6E471671407A981B2D39D3FC95 /* SQLite-Bridging.h in Headers */,
+				28AA226E04CBDAF0F06D6601BEC67B36 /* SQLite.h in Headers */,
+				1DB09721D9C9CD6BB8E468E6F80F7F40 /* SQLite.swift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +469,26 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		1F740C8E59EF319DA557011D77A8E743 /* Pods-Funflow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B952C48925BDD45F8ECD337829F12BF /* Build configuration list for PBXNativeTarget "Pods-Funflow" */;
+			buildPhases = (
+				4DB69C6A14091B741A544F9FEC190D99 /* Headers */,
+				EE669ED7D4770268261F06F242E5CDBC /* Sources */,
+				675DC22A28CFBDE6DEFFF32A50BB2E1B /* Frameworks */,
+				646A0E804DA959FBAC9C8A2CB81AA0EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0BF0FEECA56CDF85D81591ED9F486C0A /* PBXTargetDependency */,
+				463EBA76C7BABDCD81090FF91CD7D3A9 /* PBXTargetDependency */,
+			);
+			name = "Pods-Funflow";
+			productName = "Pods-Funflow";
+			productReference = 24F9D86F2459DE4918CA079A82FBCA41 /* Pods_Funflow.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		4A422124731D7B2465E8DDDF8828F729 /* Pods-FunflowTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C6D238D16692AF82CF94EC407EA48C9 /* Build configuration list for PBXNativeTarget "Pods-FunflowTests" */;
@@ -341,7 +505,7 @@
 			);
 			name = "Pods-FunflowTests";
 			productName = "Pods-FunflowTests";
-			productReference = F2E27EF2BE32DEC527206DC1DEF591E3 /* Pods_FunflowTests.framework */;
+			productReference = 566417C7066CD393B291A0B1D2019169 /* Pods_FunflowTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		6ADA5765F8A0E665B378C9356B7C05DC /* BEMCheckBox */ = {
@@ -359,26 +523,25 @@
 			);
 			name = BEMCheckBox;
 			productName = BEMCheckBox;
-			productReference = 1B815E439AE7890589599ACF72BF4BF6 /* BEMCheckBox.framework */;
+			productReference = DA078ADEF37BA9D8E3F0B11FD78BE7D4 /* BEMCheckBox.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		78F01C27BB4B700578070A3CA87F1ACC /* Pods-Funflow */ = {
+		897DC4585DBF5CDB91ECF248A016E590 /* SQLite.swift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EFA257BD720E7B14BE49FE2B24457695 /* Build configuration list for PBXNativeTarget "Pods-Funflow" */;
+			buildConfigurationList = 9C8EB4452DE3F148080A7C69EF86D651 /* Build configuration list for PBXNativeTarget "SQLite.swift" */;
 			buildPhases = (
-				08015A045FA1C91A9EDBDAE4023E78B9 /* Headers */,
-				F43263483FA865984205DB87564BE98E /* Sources */,
-				9DD05BDDDA43C3D48453E6896F3893C8 /* Frameworks */,
-				9C48EEEFDF74B423E409B0F4DE27D714 /* Resources */,
+				88DD77107E5AB9439E004563C7D05F0D /* Headers */,
+				D10AD2EF7A07436ACB91D5C5A47655A8 /* Sources */,
+				1F99CCE878A4F3FD1336ED065DC3A89C /* Frameworks */,
+				4860634F739CDD9CE7B145E6C7E7CA94 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2C3F38F03D4A7AD51A78EDD6F90FDD97 /* PBXTargetDependency */,
 			);
-			name = "Pods-Funflow";
-			productName = "Pods-Funflow";
-			productReference = 7314DF1E8F221D523B1797597CE658E6 /* Pods_Funflow.framework */;
+			name = SQLite.swift;
+			productName = SQLite.swift;
+			productReference = C0392C91C3016AA3CE34C5862CF82870 /* SQLite.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EAA2D0DA4A787493C719E94172E75D85 /* Pods-FunflowUITests */ = {
@@ -397,7 +560,7 @@
 			);
 			name = "Pods-FunflowUITests";
 			productName = "Pods-FunflowUITests";
-			productReference = 80268CB981492972DF4730ECAD735351 /* Pods_FunflowUITests.framework */;
+			productReference = 3386227F0DDAC4894498530C759D42F6 /* Pods_FunflowUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -417,20 +580,28 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 30804915C87E29272FE4D55D7E8B488B /* Products */;
+			productRefGroup = BDC2174D551AACD91EFA85416EBB56D3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				6ADA5765F8A0E665B378C9356B7C05DC /* BEMCheckBox */,
-				78F01C27BB4B700578070A3CA87F1ACC /* Pods-Funflow */,
+				1F740C8E59EF319DA557011D77A8E743 /* Pods-Funflow */,
 				4A422124731D7B2465E8DDDF8828F729 /* Pods-FunflowTests */,
 				EAA2D0DA4A787493C719E94172E75D85 /* Pods-FunflowUITests */,
+				897DC4585DBF5CDB91ECF248A016E590 /* SQLite.swift */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		26D313EF00B61ECBAFD36D2FF371B054 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4860634F739CDD9CE7B145E6C7E7CA94 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -444,14 +615,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6D9EAB302266EDEEFB0BDA6387E4C484 /* Resources */ = {
+		646A0E804DA959FBAC9C8A2CB81AA0EA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9C48EEEFDF74B423E409B0F4DE27D714 /* Resources */ = {
+		6D9EAB302266EDEEFB0BDA6387E4C484 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -489,11 +660,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F43263483FA865984205DB87564BE98E /* Sources */ = {
+		D10AD2EF7A07436ACB91D5C5A47655A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7F6DBBE845AB8B59D9DD4131AD59344 /* Pods-Funflow-dummy.m in Sources */,
+				E0D25904A14020759CB6FE52CD507CDA /* AggregateFunctions.swift in Sources */,
+				0BA28D01CF1C9A55662BAF3CDB51CB10 /* Blob.swift in Sources */,
+				8A93BA86888B8A5B0308647AED684A42 /* Coding.swift in Sources */,
+				0A90246CE13A8EA512006658889EF4D8 /* Collation.swift in Sources */,
+				249BE46621EFD3D4A82565EF9AB1DF06 /* Connection.swift in Sources */,
+				53147E0B29CA41E38A1030215EB10890 /* CoreFunctions.swift in Sources */,
+				7E6479F8F310D6963CC56902A1EF3E19 /* CustomFunctions.swift in Sources */,
+				D737E40C30DDB6402169F5F040661422 /* DateAndTimeFunctions.swift in Sources */,
+				16CD45C4D7DE1EDBC9B22DF0D0A9CB8A /* Errors.swift in Sources */,
+				1B34C73EE404C9AFECF3464C699F0654 /* Expression.swift in Sources */,
+				FD9FC3FBED945BD81FE5283821FC8F49 /* Foundation.swift in Sources */,
+				63E99CA833A47053D8525F68CF8E9341 /* FTS4.swift in Sources */,
+				6FB182A54A5E91193ECBEE35EE9B4E4F /* FTS5.swift in Sources */,
+				35EAD6048ACF5B9BB441B6DBD53B4BE9 /* Helpers.swift in Sources */,
+				1144A4D08E0105361B9103E120270ED1 /* Operators.swift in Sources */,
+				763F7A84550F70B554FFA8BC943348E7 /* Query.swift in Sources */,
+				F40356FF4E641F6AF6D52A8235CEE801 /* RTree.swift in Sources */,
+				5EFAD2D7042D4B0FDB8961728818176E /* Schema.swift in Sources */,
+				84E4E944B71746C05E45E3AC1A5DF1C9 /* Setter.swift in Sources */,
+				F960FA79CE3600BF7B922EAED6EFA395 /* SQLite-Bridging.m in Sources */,
+				F3E45DB43057B118A43110E45BA38569 /* SQLite.swift-dummy.m in Sources */,
+				2BDD8A4D1ECF45B111A814A1D166D97B /* Statement.swift in Sources */,
+				6AD0ACA5C1C6882421004003A6EEF171 /* Value.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE669ED7D4770268261F06F242E5CDBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB3EEC6094E1B58BCD4AE4A7286D91AD /* Pods-Funflow-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,20 +704,26 @@
 		0A86229392382A0CC602E5BE21C9417E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-Funflow";
-			target = 78F01C27BB4B700578070A3CA87F1ACC /* Pods-Funflow */;
+			target = 1F740C8E59EF319DA557011D77A8E743 /* Pods-Funflow */;
 			targetProxy = 7F8AC947BB063290F89B78DA775627C4 /* PBXContainerItemProxy */;
+		};
+		0BF0FEECA56CDF85D81591ED9F486C0A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BEMCheckBox;
+			target = 6ADA5765F8A0E665B378C9356B7C05DC /* BEMCheckBox */;
+			targetProxy = 3052813A047D700931C7CF86081341DE /* PBXContainerItemProxy */;
 		};
 		2381255DC7264C6FDB99770AC5F50CF5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-Funflow";
-			target = 78F01C27BB4B700578070A3CA87F1ACC /* Pods-Funflow */;
+			target = 1F740C8E59EF319DA557011D77A8E743 /* Pods-Funflow */;
 			targetProxy = 3A4099DD3DE004470D939C77EF58647E /* PBXContainerItemProxy */;
 		};
-		2C3F38F03D4A7AD51A78EDD6F90FDD97 /* PBXTargetDependency */ = {
+		463EBA76C7BABDCD81090FF91CD7D3A9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = BEMCheckBox;
-			target = 6ADA5765F8A0E665B378C9356B7C05DC /* BEMCheckBox */;
-			targetProxy = 345E8086DDFBD1296E998B7C8BCDF950 /* PBXContainerItemProxy */;
+			name = SQLite.swift;
+			target = 897DC4585DBF5CDB91ECF248A016E590 /* SQLite.swift */;
+			targetProxy = C2367730DEE0211D9C6CA513158F3602 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -587,40 +794,6 @@
 			};
 			name = Debug;
 		};
-		340F168093D143699FA1C3881F488298 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 258DFCF8B26A97B8B7A3C1601DA1885A /* Pods-Funflow.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Funflow/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Funflow/Pods-Funflow.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		70939F624F79EA31668B7B7C143724D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34D185BDE7F511840C048F7D9C66DFE8 /* Pods-FunflowUITests.release.xcconfig */;
@@ -658,7 +831,7 @@
 		};
 		71B2BFC416B97CE0EFF1F187A0D6BD40 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB986AC2221525ED26F6AC1917120E2B /* BEMCheckBox.xcconfig */;
+			baseConfigurationReference = 3475601DE0821DF200D11FB4036F8D71 /* BEMCheckBox.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -687,6 +860,40 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		74E59E0118436FD9534EA2FF3F4DE635 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 258DFCF8B26A97B8B7A3C1601DA1885A /* Pods-Funflow.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Funflow/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Funflow/Pods-Funflow.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		79DD3DD5A1EF580218F4454F039A9007 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -819,72 +1026,7 @@
 			};
 			name = Release;
 		};
-		C42ED6A31B9FC7A943C6A4BDD62E2F10 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B2FB6EC26D6005DD2E6931EBAD49473 /* Pods-FunflowTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-FunflowTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-FunflowTests/Pods-FunflowTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D53ED74F1F11F343CB1AE0F101BC8C43 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB986AC2221525ED26F6AC1917120E2B /* BEMCheckBox.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/BEMCheckBox/BEMCheckBox-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BEMCheckBox/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/BEMCheckBox/BEMCheckBox.modulemap";
-				PRODUCT_MODULE_NAME = BEMCheckBox;
-				PRODUCT_NAME = BEMCheckBox;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		E0174E0642C6D5D8C05AD41D320D69EB /* Release */ = {
+		80374C0C85585949AEE3A98B01226D2B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 61DBEE1901DCAFF644C300B087FF24CB /* Pods-Funflow.release.xcconfig */;
 			buildSettings = {
@@ -919,6 +1061,134 @@
 			};
 			name = Release;
 		};
+		C42ED6A31B9FC7A943C6A4BDD62E2F10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B2FB6EC26D6005DD2E6931EBAD49473 /* Pods-FunflowTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FunflowTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FunflowTests/Pods-FunflowTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D4CB64C6DF52170C364D029FF51B2805 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C31345882807CD034D48106589C212B0 /* SQLite.swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SQLite.swift/SQLite.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SQLite.swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SQLite.swift/SQLite.swift.modulemap";
+				PRODUCT_MODULE_NAME = SQLite;
+				PRODUCT_NAME = SQLite;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D53ED74F1F11F343CB1AE0F101BC8C43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3475601DE0821DF200D11FB4036F8D71 /* BEMCheckBox.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BEMCheckBox/BEMCheckBox-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BEMCheckBox/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BEMCheckBox/BEMCheckBox.modulemap";
+				PRODUCT_MODULE_NAME = BEMCheckBox;
+				PRODUCT_NAME = BEMCheckBox;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D7D3BCDDF0AA28F5BB1BF628B739BE5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C31345882807CD034D48106589C212B0 /* SQLite.swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SQLite.swift/SQLite.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SQLite.swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SQLite.swift/SQLite.swift.modulemap";
+				PRODUCT_MODULE_NAME = SQLite;
+				PRODUCT_NAME = SQLite;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -936,6 +1206,15 @@
 			buildConfigurations = (
 				D53ED74F1F11F343CB1AE0F101BC8C43 /* Debug */,
 				71B2BFC416B97CE0EFF1F187A0D6BD40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B952C48925BDD45F8ECD337829F12BF /* Build configuration list for PBXNativeTarget "Pods-Funflow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74E59E0118436FD9534EA2FF3F4DE635 /* Debug */,
+				80374C0C85585949AEE3A98B01226D2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -958,11 +1237,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EFA257BD720E7B14BE49FE2B24457695 /* Build configuration list for PBXNativeTarget "Pods-Funflow" */ = {
+		9C8EB4452DE3F148080A7C69EF86D651 /* Build configuration list for PBXNativeTarget "SQLite.swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				340F168093D143699FA1C3881F488298 /* Debug */,
-				E0174E0642C6D5D8C05AD41D320D69EB /* Release */,
+				D7D3BCDDF0AA28F5BB1BF628B739BE5B /* Debug */,
+				D4CB64C6DF52170C364D029FF51B2805 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

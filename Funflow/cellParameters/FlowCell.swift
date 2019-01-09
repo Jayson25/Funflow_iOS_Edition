@@ -8,16 +8,28 @@
 
 import UIKit
 
-class CardCell: UITableViewCell {
+class FlowCell: UITableViewCell, ComponentLayout {
     
-    private var cardID : Int!
+    private var flowID : Int!
+    
+    override var frame: CGRect {
+        get {
+            return super.frame
+        }
+        set (newFrame) {
+            var frame =  newFrame
+            frame.origin.x += GenericSettings.rowSpacing/2
+            frame.size.width -= GenericSettings.rowSpacing
+            super.frame = frame
+        }
+    }
     
     @IBOutlet weak var logoCard: UIImageView!
     @IBOutlet weak var labelView: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        initializeLayout()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -26,7 +38,7 @@ class CardCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func assignCardIDOnCell(id : Int){
-        self.cardID = id
+    func assignFlowIDOnCell(id : Int){
+        self.flowID = id
     }
 }

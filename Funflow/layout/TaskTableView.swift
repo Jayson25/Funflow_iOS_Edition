@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TaskTableView: UITableView {
+class TaskTableView: UITableView, ComponentLayout {
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -23,17 +23,17 @@ class TaskTableView: UITableView {
     private let tableViewEmptyMessage : String = "You don't have any tasks yet."
     
     func setupEmptyBackgroundView(){
-        let emptyBGV = TaskTableBackgroundView(image: image, top: self.tableViewTitle, bottom: self.tableViewEmptyMessage)
+        let emptyBGV = FieldBackgroundView(image: image, top: self.tableViewTitle, bottom: self.tableViewEmptyMessage)
         self.backgroundView = emptyBGV
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.layer.cornerRadius = ConfigurationParam.roundedCorners
+        initializeLayout()
     }
 
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
-        self.layer.cornerRadius = ConfigurationParam.roundedCorners
+        initializeLayout()
     }
 }

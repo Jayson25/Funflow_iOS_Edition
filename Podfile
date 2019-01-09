@@ -8,6 +8,7 @@ target 'Funflow' do
   # Pods for Funflow
 	workspace 'Funflow'
 	pod 'BEMCheckBox'
+	pod 'SQLite.swift', '~> 0.11.5'
 
   target 'FunflowTests' do
     inherit! :search_paths

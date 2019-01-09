@@ -13,14 +13,11 @@ class TaskTableDelegate : NSObject, UITableViewDelegate, UITableViewDataSource{
     
     var pageView : UIViewController!
     var addButton : UIButton!
-    
     var tasks : [Task]!
-    
     var num = 10
     var isEditable : Bool = true
     
     let taskCell = "taskCell"
-    //var didSelectRow : ((_ dataItem: Int, _ cell: UITableViewCell) -> Void)?
     
     init(_ pageView: UIViewController, _ tasks : [Task]){
         self.tasks = tasks
@@ -50,7 +47,12 @@ class TaskTableDelegate : NSObject, UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: taskCell) as! TaskCell
-        cell.task = tasks[indexPath.row]
+        
+        cell.task = self.tasks[indexPath.row]
+        cell.checkbox.setOn(cell.task.isDone, animated: true)
+        cell.taskTextView.text = cell.task.description != "" ? cell.task.description: "click here to edit text"
+        cell.taskTextView.font = UIFont(name: (cell.taskTextView.font?.fontName)!, size: 15)
+
         return cell
     }
     
@@ -63,12 +65,18 @@ class TaskTableDelegate : NSObject, UITableViewDelegate, UITableViewDataSource{
         if self.isEditable{
             
             if editingStyle == .delete{
-                print(tableView.numberOfRows(inSection: indexPath.section))
                 
-                tableView.beginUpdates()
+                print(indexPath)
+                
                 tasks.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .fade)
-                tableView.endUpdates()
+                //tableView.reloadData()
+                
+                for i in (0..<tasks.count){
+                    print(tasks[i].description)
+                }
+                
+                print("\n")
             }
         }
     }

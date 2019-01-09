@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class buttonLayout: UIButton {
+class ButtonLayout: UIButton {
     
     @IBInspectable var borderWidth : CGFloat = 0{
         didSet {
@@ -49,7 +49,7 @@ class buttonLayout: UIButton {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        layer.cornerRadius = ConfigurationParam.roundedCorners
+        layer.cornerRadius = GenericSettings.genericCornerRadius
         clipsToBounds = true
         
         if borderWidth > 0 {

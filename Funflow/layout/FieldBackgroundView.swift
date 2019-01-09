@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TaskTableBackgroundView: UIView {
+class FieldBackgroundView: UIView, ComponentLayout {
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -36,11 +36,13 @@ class TaskTableBackgroundView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.setupViews()
+        initializeLayout()
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setupViews()
+        initializeLayout()
     }
     
     init(image: UIImage, top: String, bottom: String){
@@ -63,7 +65,7 @@ class TaskTableBackgroundView: UIView {
     func setupImageView(image: UIImage){
         imageView.contentMode = UIView.ContentMode.scaleAspectFit
         imageView.image = image
-        imageView.tintColor = ConfigurationParam.themeColor
+        imageView.tintColor = GenericSettings.themeColor
     }
     
     func setupLabels(top: String, bottom: String){
