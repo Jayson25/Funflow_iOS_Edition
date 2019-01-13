@@ -48,7 +48,7 @@ final class MainMenuViewController: UICollectionViewController {
     }
     
     @objc func goToFlowsList(_ sender : UIButton){
-         let listOfFlows = storyboard?.instantiateViewController(withIdentifier: "listOfFlows") as! ListOfFlowsViewControllerDecrepated
+         let listOfFlows = storyboard?.instantiateViewController(withIdentifier: "listOfFlowsView") as! ListOfFlowViewController
          let categoryName = GenericSettings.categories[sender.tag]!.first?.key
         
          listOfFlows.category = categoryName

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FieldBackgroundView: UIView, ComponentLayout {
+class FieldBackgroundView: UIView {
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -36,13 +36,13 @@ class FieldBackgroundView: UIView, ComponentLayout {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.setupViews()
-        initializeLayout()
+        GenericSettings.applyLayout(forView: self)
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setupViews()
-        initializeLayout()
+        GenericSettings.applyLayout(forView: self)
     }
     
     init(image: UIImage, top: String, bottom: String){

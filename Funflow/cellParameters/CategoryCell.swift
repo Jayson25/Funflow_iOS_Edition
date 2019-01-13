@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategoryCell: UICollectionViewCell, ComponentLayout {
+class CategoryCell: UICollectionViewCell {
     
     var categoryIcon: UIImageView!
     var clickable: UIButton!
@@ -17,13 +17,13 @@ class CategoryCell: UICollectionViewCell, ComponentLayout {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        initializeLayout()
+        GenericSettings.applyLayout(forView: self)
         initCellLayout()
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        initializeLayout()
+        GenericSettings.applyLayout(forView: self)
         initCellLayout()
     }
     
@@ -40,6 +40,9 @@ class CategoryCell: UICollectionViewCell, ComponentLayout {
         self.contentView.addSubview(self.clickable)
         self.contentView.addSubview(self.categoryTitle)
         self.contentView.addSubview(self.categoryIcon)
+        
+        self.categoryTitle.textColor = GenericSettings.themeColor
+        self.categoryTitle.font = UIFont(name: GenericSettings.fontStyle, size: 18.0)
         
         self.clickable?.translatesAutoresizingMaskIntoConstraints = false
         self.categoryIcon.translatesAutoresizingMaskIntoConstraints = false

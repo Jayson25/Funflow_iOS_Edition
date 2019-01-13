@@ -14,6 +14,7 @@ class DBController {
     var dbConnector : Connection!
     var flowDAO : FlowDAO!
     var taskDAO : TaskDAO!
+    var userDAO : UserDAO!
     
     let DB_VERSION = "1.0.0"
     
@@ -24,6 +25,7 @@ class DBController {
         self.dbConnector = try Connection(fileURL.path)
         self.flowDAO = try FlowDAO(self.dbConnector)
         self.taskDAO = try TaskDAO(self.dbConnector, flowDAO: self.flowDAO)
+        self.userDAO = try UserDAO(self.dbConnector)
     }
     
     func addFlow(flow: Flow, tasks: [Task]) throws{

@@ -1,22 +1,26 @@
 PODS:
   - BEMCheckBox (1.4.1)
+  - CryptoSwift (0.13.1)
   - SQLite.swift (0.11.5):
     - SQLite.swift/standard (= 0.11.5)
   - SQLite.swift/standard (0.11.5)
 
 DEPENDENCIES:
   - BEMCheckBox
+  - CryptoSwift
   - SQLite.swift (~> 0.11.5)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - BEMCheckBox
+    - CryptoSwift
     - SQLite.swift
 
 SPEC CHECKSUMS:
   BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
+  CryptoSwift: ff68c35a53e03177d31aaa2c1e8b3e010aeed6cb
   SQLite.swift: 6e5356850bb1791459f8c16d6ee9195b28714a2e
 
-PODFILE CHECKSUM: 124d7b58a033d30a8091fd31f111ad6fab112e14
+PODFILE CHECKSUM: 739a4a3913eb3d47dd23933f9c1ce3b67664b0d1
 
 COCOAPODS: 1.5.3

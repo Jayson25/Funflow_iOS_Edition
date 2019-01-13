@@ -89,7 +89,7 @@ class FlowDAO{
         let flows = flowTable.filter(self.category == category)
         var listOfFlows = [Flow]()
         
-        for flowProperties in try dbConnector.prepare(flowTable){
+        for flowProperties in try dbConnector.prepare(flows){
             let flow = Flow(flowProperties[self.id],
                             title: flowProperties[self.title],
                             image: flowProperties[self.image],

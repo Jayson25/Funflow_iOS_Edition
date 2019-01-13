@@ -9,7 +9,7 @@
 import UIKit
 import SQLite
 
-class FlowFormViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UITextViewDelegate {
+class FlowFormViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
 
     fileprivate var imagePath : String!
     let dateFormatter: DateFormatter = DateFormatter()
@@ -17,29 +17,28 @@ class FlowFormViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var dbController : DBController!
     
     //labels for form
-    @IBOutlet weak var titleFieldLabel: FieldLabel!
-    @IBOutlet weak var categoryFieldLabel: FieldLabel!
-    @IBOutlet weak var authorFieldLabel: FieldLabel!
-    @IBOutlet weak var releaseDateFieldLabel: FieldLabel!
-    @IBOutlet weak var descriptionFieldLabel: FieldLabel!
-    @IBOutlet weak var RatingEditLabel: FieldLabel!
+    @IBOutlet weak var titleFieldLabel: UIFieldLabel!
+    @IBOutlet weak var categoryFieldLabel: UIFieldLabel!
+    @IBOutlet weak var authorFieldLabel: UIFieldLabel!
+    @IBOutlet weak var releaseDateFieldLabel: UIFieldLabel!
+    @IBOutlet weak var descriptionFieldLabel: UIFieldLabel!
+    @IBOutlet weak var RatingEditLabel: UIFieldLabel!
     
     //scroll view
     @IBOutlet weak var scrollFieldForm: UIScrollView!
     
     //fields that can bne filled
-    @IBOutlet weak var titleField: TextFieldLayout!
-    @IBOutlet weak var releaseDateField: TextFieldLayout!
-    @IBOutlet weak var categoryField: TextFieldLayout!
-    @IBOutlet weak var authorField: TextFieldLayout!
+    @IBOutlet weak var titleField: UITextFieldLayout!
+    @IBOutlet weak var releaseDateField: UITextFieldLayout!
+    @IBOutlet weak var categoryField: UITextFieldLayout!
+    @IBOutlet weak var authorField: UITextFieldLayout!
     
     //task table object
-    @IBOutlet weak var taskTable: TaskTableView!
+    @IBOutlet weak var taskTable: UITaskTableView!
     
-    @IBOutlet weak var profileFlowImage: UIImageView!
-    @IBOutlet weak var cardImageView: UIImageView!
+    @IBOutlet weak var profileFrame: UIFlowImageView!
     
-    @IBOutlet weak var descriptionAreaEdit: UITextView!
+    @IBOutlet weak var descriptionAreaEdit: UITextViewLayout!
     
     @IBOutlet weak var formContentView: UIView!
     
@@ -52,13 +51,13 @@ class FlowFormViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     @IBOutlet weak var keyboardHeightLayoutConstraint: NSLayoutConstraint?
     
-    private var taskTableDelegate : TaskTableDelegate?
+    private var taskTableDelegate : UITaskTableDelegate?
     
     var errorAlert : UIAlertController!
     var successAlert : UIAlertController!
     var imageChooseAction = UIAlertController(title:"Choose Image", message: nil, preferredStyle: .actionSheet)
     
-    var tasks : [Task]!
+    var tasks : [Task]! = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,29 +66,19 @@ class FlowFormViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         self.errorAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.successAlert = UIAlertController(title: "Sucess", message: nil, preferredStyle: .alert)
         self.successAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-
-        cardImageView.backgroundColor = UIColor.white
-        cardImageView.layer.cornerRadius = GenericSettings.genericCornerRadius
-        
-        tasks = [Task]()
         
         self.formContentView.backgroundColor = GenericSettings.backgroundColor
-        self.taskTableDelegate = TaskTableDelegate(self, self.tasks ?? [])
+        self.taskTableDelegate = UITaskTableDelegate(self, self.tasks)
         
         self.dateFormatter.dateStyle = DateFormatter.Style.medium
         self.dateFormatter.timeStyle = DateFormatter.Style.none
         
-        self.releaseDateField.delegate = self
-        self.categoryField.delegate = self
-        self.authorField.delegate = self
-        
         self.descriptionAreaEdit.text = ""
         self.descriptionAreaEdit.layer.cornerRadius = GenericSettings.genericCornerRadius
-        self.descriptionAreaEdit.delegate = self
         
         self.taskTable.delegate = self.taskTableDelegate
         self.taskTable.dataSource = self.taskTableDelegate
-        self.taskTable.tableFooterView = UIView(frame: CGRect.zero)
+        self.taskTable.tableFooterView = UIView(frame: .zero)
         self.taskTable.setupEmptyBackgroundView()
         
         let date = Date()
@@ -109,7 +98,7 @@ class FlowFormViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         }
         
         catch let error{
-            print("hello my world: \(error)")
+            print("\(error)")
         }
     }
     
@@ -133,14 +122,6 @@ class FlowFormViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    override func willMove(toParent parent: UIViewController?) {
-        print("hello")
-    }
-    
-    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
-        print("no more")
-    }
-    
     @IBAction func releaseDateEditing(_ sender: UITextField) {
         let datePickerView : UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePicker.Mode.date
@@ -159,8 +140,11 @@ class FlowFormViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBAction func chooseImageAction(_ sender: UIButton) {
         ImagerPickerManager(sender).pickImage(self){
             image in
-
-            self.profileFlowImage.image = image
+            
+            autoreleasepool{ () -> () in
+                self.profileFrame.imageView?.image = image
+                self.profileFrame.updateBackground()
+            }
         }
     }
     
@@ -180,82 +164,79 @@ class FlowFormViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         let description : String = self.descriptionAreaEdit.text!
         let rating : Int = Int(self.starRatingEdit.rating)
         
-        guard let isValidCatgory = GenericSettings.categories.enumerated().first(where: {$0.element.value.first?.key == category}) else {
-            self.errorAlert.message = category != "" ? category : "<CATEGORY_NOT_INITIALIZED>"  + " is not a valid category"
-            present(self.errorAlert, animated: true, completion: nil)
-            return
-        }
-        
         let flow : Flow = Flow(title: title, image: "", category: category, author: author, releaseDate: releaseDate, rating: rating, description: description)
         let tasks : [Task] = self.taskTableDelegate!.tasks
         
-        /**save Image to folder app system
-        */
-        
         let documentFolder : URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let imgFolderPath : URL = documentFolder.appendingPathComponent("DCIM", isDirectory: true)
+        var imageName : String?
+        var imagePath : URL?
         
-        if (self.profileFlowImage.image != nil){
-            //create folders if not exists
-            do{
-                
+        //if a category is not assigned
+        guard GenericSettings.categories.enumerated().first(where: {$0.element.value.first?.key == category}) != nil else {
+            self.errorAlert.message = (category != "" ? category : "<CATEGORY_NOT_INITIALIZED>")  + " is not a valid category"
+            present(self.errorAlert, animated: true, completion: nil)
+            return
+        }
+
+        if (self.profileFrame.imageView?.image != nil) {
+            do {
                 var isDir : ObjCBool = true
                 if (!FileManager.default.fileExists(atPath: imgFolderPath.path, isDirectory: &isDir)){
                     try FileManager.default.createDirectory(atPath: imgFolderPath.path, withIntermediateDirectories: true, attributes: nil)
                 }
-                
                 //generate name for the profile image
                 let letters = "abcdefghijklmonpqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-                let imageName = String((0...20).map{_ in letters.randomElement()!}) + ".png"
-                let imgPath : URL = imgFolderPath.appendingPathComponent(imageName, isDirectory: false)
-                
-                //save image to file
-                if let png = GenericSettings.fixOrientation(img: self.profileFlowImage.image!).pngData(){
-                    do {
-                        try png.write(to: imgPath)
-                        flow.image = imageName
-                    }
-                    
-                    catch let error{
-                        self.errorAlert.message = "Could not save profile image to app folder\n\(error)"
-                        present(self.errorAlert, animated: true, completion: nil)
-                    }
-                }
-                
-                else {
-                    self.errorAlert.message = "could not extract UIImage to PNG data"
-                    present(self.errorAlert, animated: true, completion: nil)
-                }
+                imageName = String((0...20).map{_ in letters.randomElement()!}) + ".jpg"
+                imagePath = imgFolderPath.appendingPathComponent(imageName!, isDirectory: false)
+                flow.image = imageName
             }
-            
-            catch let error{
+                
+            catch let error {
                 self.errorAlert.message = "Unable to create directory\n\(error)"
                 present(self.errorAlert, animated: true, completion: nil)
             }
         }
         
-        do{
+        //saving the flow the database
+        do {
             try self.dbController.addFlow(flow: flow, tasks: tasks)
-            self.resetForm()
         }
         
-        catch let Result.error(message, code, statement) where code == SQLITE_CONSTRAINT{
-            if (message.contains("UNIQUE")){
-                self.errorAlert.message = flow.title + " already exists"
-            }
-            
+        catch let Result.error(message, code, _) where code == SQLITE_CONSTRAINT {
+            if (message.contains("UNIQUE")) {  self.errorAlert.message = flow.title + " already exists" }
             present(self.errorAlert, animated: true, completion: nil)
         }
         
-        catch let error{
+        catch let error {
             self.errorAlert.message = "\(error)"
             present(self.errorAlert, animated: true, completion: nil)
         }
         
-        defer{
-            self.successAlert.message = flow.title + " has been saved"
-            present(self.successAlert, animated: true, completion: nil)
+        //Saving the image to the directory of application if exists
+        if (self.profileFrame.imageView?.image != nil) {
+            let image = GenericSettings.resizeImage(image: self.profileFrame.imageView.image, targetSize: CGSize(width: 300, height: 300))
+            if let jpg = GenericSettings.fixOrientation(img: image!)!.jpegData(compressionQuality: 1.0) {
+                do {
+                    try jpg.write(to: imagePath!)
+                }
+                    
+                catch let error{
+                    self.errorAlert.message = "Could not save profile image to app folder\n\(error)"
+                    present(self.errorAlert, animated: true, completion: nil)
+                }
+            }
+                
+            else {
+                self.errorAlert.message = "could not extract UIImage to PNG data"
+                present(self.errorAlert, animated: true, completion: nil)
+            }
         }
+        
+        self.resetForm()
+        self.successAlert.message = flow.title + " has been saved"
+        present(self.successAlert, animated: true, completion: nil)
+        //self.resetForm()
     }
     
     @IBAction func cancelFormAction(_ sender: Any) {
@@ -307,13 +288,14 @@ class FlowFormViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         let date = Date()
         
         self.releaseDateField.text = dateFormatter.string(from: date)
-        self.titleField.text = ""
+        self.titleField.text = nil
         self.categoryField.text = GenericSettings.categories[0]?.first?.key
-        self.authorField.text = ""
-        self.descriptionAreaEdit.text = ""
-        self.starRatingEdit.rating = 0
-        self.profileFlowImage.image = nil
+        self.authorField.text = nil
+        self.descriptionAreaEdit.text = nil
+        self.starRatingEdit.rating = 5
         self.resetTaskTableView()
+        self.profileFrame.imageView?.image = nil
+        self.profileFrame.updateBackground()
     }
     
     func resetTaskTableView() {

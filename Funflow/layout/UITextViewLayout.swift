@@ -17,5 +17,14 @@ class UITextViewLayout: UITextView {
         // Drawing code
     }
     */
-
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        GenericSettings.applyLayout(forView: self)
+    }
+    
+    override init(frame: CGRect, textContainer: NSTextContainer?) {
+        super.init(frame: frame, textContainer: textContainer)
+        GenericSettings.applyLayout(forView: self)
+    }
 }

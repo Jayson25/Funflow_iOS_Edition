@@ -20,23 +20,29 @@
 		ED0481CD21DFAE52003A0EA3 /* DBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0481CC21DFAE52003A0EA3 /* DBController.swift */; };
 		ED38F50021BFE61100677F24 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED38F4FF21BFE61100677F24 /* CategoryCell.swift */; };
 		ED38F50621C002CE00677F24 /* GenericSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED38F50521C002CE00677F24 /* GenericSettings.swift */; };
-		ED38F50821C003EC00677F24 /* ListOfFlowsViewControllerDecrepated.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED38F50721C003EC00677F24 /* ListOfFlowsViewControllerDecrepated.swift */; };
 		ED38F50A21C004AC00677F24 /* FlowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED38F50921C004AC00677F24 /* FlowCell.swift */; };
-		ED38F51421C3B6A300677F24 /* ButtonLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED38F51321C3B6A300677F24 /* ButtonLayout.swift */; };
+		ED38F51421C3B6A300677F24 /* UIButtonLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED38F51321C3B6A300677F24 /* UIButtonLayout.swift */; };
 		ED5DAC6721CD842C002E0FD1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DAC6621CD842C002E0FD1 /* Category.swift */; };
 		ED5DAC6921CD86E2002E0FD1 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DAC6821CD86E2002E0FD1 /* Task.swift */; };
 		ED5DAC6B21CD8958002E0FD1 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DAC6A21CD8958002E0FD1 /* Flow.swift */; };
 		ED66B9D521B964A6004551B0 /* FlowFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED66B9D421B964A6004551B0 /* FlowFormViewController.swift */; };
-		ED675A8221D5127E0078BC55 /* TaskTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED675A8121D5127E0078BC55 /* TaskTableDelegate.swift */; };
+		ED675A8221D5127E0078BC55 /* UITaskTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED675A8121D5127E0078BC55 /* UITaskTableDelegate.swift */; };
 		ED76248621D7F8EC00DB3D34 /* FieldBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED76248521D7F8EC00DB3D34 /* FieldBackgroundView.swift */; };
+		ED76784E21EA928A0086B5F3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED76784D21EA928A0086B5F3 /* LoginViewController.swift */; };
+		ED76785721EAACAF0086B5F3 /* background_login.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED76785621EAACAF0086B5F3 /* background_login.jpg */; };
+		ED76785D21EB64B10086B5F3 /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED76785C21EB64B10086B5F3 /* UserDAO.swift */; };
+		ED76786021EB9C570086B5F3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED76785F21EB9C570086B5F3 /* SettingsViewController.swift */; };
+		ED76786221EBBAA20086B5F3 /* FlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED76786121EBBAA20086B5F3 /* FlowViewController.swift */; };
+		ED76786421EBC9B50086B5F3 /* main_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED76786321EBC9B50086B5F3 /* main_background.jpg */; };
 		ED7E1F7221DC819400A8E15F /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E1F7121DC819400A8E15F /* CosmosDistrib.swift */; };
 		ED90CF8B21CDA596004A95D7 /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED90CF8A21CDA596004A95D7 /* ImagePickerManager.swift */; };
 		EDF3930321D4CCB400E2B7B2 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF3930221D4CCB400E2B7B2 /* TaskCell.swift */; };
-		EDFC33DD21D80C8D0087A472 /* TaskTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFC33DC21D80C8D0087A472 /* TaskTableView.swift */; };
+		EDFB7B7421E6331D00106AFD /* UIFlowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFB7B7321E6331D00106AFD /* UIFlowImageView.swift */; };
+		EDFBB20921E8C8B5001F9D3D /* UICircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBB20821E8C8B5001F9D3D /* UICircularProgressBar.swift */; };
+		EDFC33DD21D80C8D0087A472 /* UITaskTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFC33DC21D80C8D0087A472 /* UITaskTableView.swift */; };
 		EDFF00EB21BE9B5D00CD9AED /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFF00EA21BE9B5D00CD9AED /* MainMenuViewController.swift */; };
-		EDFFC42A21E167F00085423E /* FieldLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFFC42921E167F00085423E /* FieldLabel.swift */; };
-		EDFFC42C21E169FB0085423E /* TextFieldLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFFC42B21E169FB0085423E /* TextFieldLayout.swift */; };
-		EDFFC42E21E4C4900085423E /* ComponentLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFFC42D21E4C4900085423E /* ComponentLayout.swift */; };
+		EDFFC42A21E167F00085423E /* UIFieldLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFFC42921E167F00085423E /* UIFieldLabel.swift */; };
+		EDFFC42C21E169FB0085423E /* UITextFieldLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFFC42B21E169FB0085423E /* UITextFieldLayout.swift */; };
 		EDFFC43021E527740085423E /* ListOfFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFFC42F21E527740085423E /* ListOfFlowViewController.swift */; };
 		EDFFC43221E555D10085423E /* UITextViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFFC43121E555D10085423E /* UITextViewLayout.swift */; };
 		FF9FF0621754280F2BC9DB95 /* Pods_Funflow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E045EFD3F984D6A888DF68A /* Pods_Funflow.framework */; };
@@ -85,24 +91,30 @@
 		ED0481CC21DFAE52003A0EA3 /* DBController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBController.swift; sourceTree = "<group>"; };
 		ED38F4FF21BFE61100677F24 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		ED38F50521C002CE00677F24 /* GenericSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericSettings.swift; sourceTree = "<group>"; };
-		ED38F50721C003EC00677F24 /* ListOfFlowsViewControllerDecrepated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfFlowsViewControllerDecrepated.swift; sourceTree = "<group>"; };
 		ED38F50921C004AC00677F24 /* FlowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCell.swift; sourceTree = "<group>"; };
-		ED38F51321C3B6A300677F24 /* ButtonLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLayout.swift; sourceTree = "<group>"; };
+		ED38F51321C3B6A300677F24 /* UIButtonLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonLayout.swift; sourceTree = "<group>"; };
 		ED5DAC6621CD842C002E0FD1 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		ED5DAC6821CD86E2002E0FD1 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		ED5DAC6A21CD8958002E0FD1 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 		ED66B9D421B964A6004551B0 /* FlowFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowFormViewController.swift; sourceTree = "<group>"; };
-		ED675A8121D5127E0078BC55 /* TaskTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableDelegate.swift; sourceTree = "<group>"; };
+		ED675A8121D5127E0078BC55 /* UITaskTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITaskTableDelegate.swift; sourceTree = "<group>"; };
 		ED76248521D7F8EC00DB3D34 /* FieldBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldBackgroundView.swift; sourceTree = "<group>"; };
+		ED76784D21EA928A0086B5F3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		ED76785621EAACAF0086B5F3 /* background_login.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background_login.jpg; path = ../../../Desktop/background_login.jpg; sourceTree = "<group>"; };
+		ED76785C21EB64B10086B5F3 /* UserDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDAO.swift; sourceTree = "<group>"; };
+		ED76785F21EB9C570086B5F3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		ED76786121EBBAA20086B5F3 /* FlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowViewController.swift; sourceTree = "<group>"; };
+		ED76786321EBC9B50086B5F3 /* main_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = main_background.jpg; sourceTree = "<group>"; };
 		ED7E1F7121DC819400A8E15F /* CosmosDistrib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
 		ED90CF8A21CDA596004A95D7 /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
 		EDF3930221D4CCB400E2B7B2 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		EDF3934921D4D89300E2B7B2 /* Funflow.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Funflow.xcodeproj; sourceTree = "<group>"; };
-		EDFC33DC21D80C8D0087A472 /* TaskTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableView.swift; sourceTree = "<group>"; };
+		EDFB7B7321E6331D00106AFD /* UIFlowImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlowImageView.swift; sourceTree = "<group>"; };
+		EDFBB20821E8C8B5001F9D3D /* UICircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICircularProgressBar.swift; sourceTree = "<group>"; };
+		EDFC33DC21D80C8D0087A472 /* UITaskTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITaskTableView.swift; sourceTree = "<group>"; };
 		EDFF00EA21BE9B5D00CD9AED /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
-		EDFFC42921E167F00085423E /* FieldLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldLabel.swift; sourceTree = "<group>"; };
-		EDFFC42B21E169FB0085423E /* TextFieldLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldLayout.swift; sourceTree = "<group>"; };
-		EDFFC42D21E4C4900085423E /* ComponentLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentLayout.swift; sourceTree = "<group>"; };
+		EDFFC42921E167F00085423E /* UIFieldLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFieldLabel.swift; sourceTree = "<group>"; };
+		EDFFC42B21E169FB0085423E /* UITextFieldLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldLayout.swift; sourceTree = "<group>"; };
 		EDFFC42F21E527740085423E /* ListOfFlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfFlowViewController.swift; sourceTree = "<group>"; };
 		EDFFC43121E555D10085423E /* UITextViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewLayout.swift; sourceTree = "<group>"; };
 		F5BC69B0645F642E5829F9A3 /* Pods-Funflow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Funflow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Funflow/Pods-Funflow.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +164,7 @@
 		AA5BA25043EFCB8F7012FD1D /* Funflow */ = {
 			isa = PBXGroup;
 			children = (
+				ED76785821EAAD490086B5F3 /* image */,
 				ED7E1F7021DC818300A8E15F /* layout */,
 				ED90CF8C21CDB25C004A95D7 /* itemTweakers */,
 				ED5DAC6421CD83F7002E0FD1 /* database */,
@@ -163,6 +176,7 @@
 				AA5BA7FADB0938E866022612 /* AppDelegate.swift */,
 				AA5BAD8BA6A3E31CBA331EB1 /* Main.storyboard */,
 				ED38F50521C002CE00677F24 /* GenericSettings.swift */,
+				ED76785621EAACAF0086B5F3 /* background_login.jpg */,
 			);
 			path = Funflow;
 			sourceTree = "<group>";
@@ -212,6 +226,7 @@
 			children = (
 				ED0481C421DCF974003A0EA3 /* FlowDAO.swift */,
 				ED0481C821DD2195003A0EA3 /* TaskDAO.swift */,
+				ED76785C21EB64B10086B5F3 /* UserDAO.swift */,
 			);
 			path = DAO;
 			sourceTree = "<group>";
@@ -230,9 +245,11 @@
 			isa = PBXGroup;
 			children = (
 				EDFF00EA21BE9B5D00CD9AED /* MainMenuViewController.swift */,
-				ED38F50721C003EC00677F24 /* ListOfFlowsViewControllerDecrepated.swift */,
 				ED66B9D421B964A6004551B0 /* FlowFormViewController.swift */,
 				EDFFC42F21E527740085423E /* ListOfFlowViewController.swift */,
+				ED76784D21EA928A0086B5F3 /* LoginViewController.swift */,
+				ED76785F21EB9C570086B5F3 /* SettingsViewController.swift */,
+				ED76786121EBBAA20086B5F3 /* FlowViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -257,17 +274,26 @@
 			path = dbObjects;
 			sourceTree = "<group>";
 		};
+		ED76785821EAAD490086B5F3 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				ED76786321EBC9B50086B5F3 /* main_background.jpg */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
 		ED7E1F7021DC818300A8E15F /* layout */ = {
 			isa = PBXGroup;
 			children = (
-				ED38F51321C3B6A300677F24 /* ButtonLayout.swift */,
-				EDFC33DC21D80C8D0087A472 /* TaskTableView.swift */,
+				ED38F51321C3B6A300677F24 /* UIButtonLayout.swift */,
+				EDFC33DC21D80C8D0087A472 /* UITaskTableView.swift */,
 				ED7E1F7121DC819400A8E15F /* CosmosDistrib.swift */,
 				ED76248521D7F8EC00DB3D34 /* FieldBackgroundView.swift */,
-				EDFFC42921E167F00085423E /* FieldLabel.swift */,
-				EDFFC42B21E169FB0085423E /* TextFieldLayout.swift */,
-				EDFFC42D21E4C4900085423E /* ComponentLayout.swift */,
+				EDFFC42921E167F00085423E /* UIFieldLabel.swift */,
+				EDFFC42B21E169FB0085423E /* UITextFieldLayout.swift */,
 				EDFFC43121E555D10085423E /* UITextViewLayout.swift */,
+				EDFB7B7321E6331D00106AFD /* UIFlowImageView.swift */,
+				EDFBB20821E8C8B5001F9D3D /* UICircularProgressBar.swift */,
 			);
 			path = layout;
 			sourceTree = "<group>";
@@ -276,7 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				ED90CF8A21CDA596004A95D7 /* ImagePickerManager.swift */,
-				ED675A8121D5127E0078BC55 /* TaskTableDelegate.swift */,
+				ED675A8121D5127E0078BC55 /* UITaskTableDelegate.swift */,
 			);
 			path = itemTweakers;
 			sourceTree = "<group>";
@@ -405,7 +431,9 @@
 			files = (
 				AA5BA533F5D93DF1F41F65B8 /* Assets.xcassets in Resources */,
 				AA5BA0363FAB82656CD6AA78 /* LaunchScreen.storyboard in Resources */,
+				ED76786421EBC9B50086B5F3 /* main_background.jpg in Resources */,
 				AA5BACEABE2F8EFFFE7928C1 /* Main.storyboard in Resources */,
+				ED76785721EAACAF0086B5F3 /* background_login.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +508,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Funflow/Pods-Funflow-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -487,6 +516,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,31 +553,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED76784E21EA928A0086B5F3 /* LoginViewController.swift in Sources */,
 				ED38F50A21C004AC00677F24 /* FlowCell.swift in Sources */,
 				EDFFC43021E527740085423E /* ListOfFlowViewController.swift in Sources */,
 				AA5BA63E968FED8569148857 /* AppDelegate.swift in Sources */,
 				ED5DAC6921CD86E2002E0FD1 /* Task.swift in Sources */,
-				EDFC33DD21D80C8D0087A472 /* TaskTableView.swift in Sources */,
+				EDFC33DD21D80C8D0087A472 /* UITaskTableView.swift in Sources */,
 				EDFFC43221E555D10085423E /* UITextViewLayout.swift in Sources */,
 				ED66B9D521B964A6004551B0 /* FlowFormViewController.swift in Sources */,
-				EDFFC42C21E169FB0085423E /* TextFieldLayout.swift in Sources */,
+				EDFFC42C21E169FB0085423E /* UITextFieldLayout.swift in Sources */,
 				ED7E1F7221DC819400A8E15F /* CosmosDistrib.swift in Sources */,
-				EDFFC42A21E167F00085423E /* FieldLabel.swift in Sources */,
+				EDFFC42A21E167F00085423E /* UIFieldLabel.swift in Sources */,
 				EDF3930321D4CCB400E2B7B2 /* TaskCell.swift in Sources */,
-				ED38F50821C003EC00677F24 /* ListOfFlowsViewControllerDecrepated.swift in Sources */,
 				ED38F50621C002CE00677F24 /* GenericSettings.swift in Sources */,
-				ED675A8221D5127E0078BC55 /* TaskTableDelegate.swift in Sources */,
+				ED76786221EBBAA20086B5F3 /* FlowViewController.swift in Sources */,
+				ED675A8221D5127E0078BC55 /* UITaskTableDelegate.swift in Sources */,
 				ED5DAC6721CD842C002E0FD1 /* Category.swift in Sources */,
 				ED5DAC6B21CD8958002E0FD1 /* Flow.swift in Sources */,
 				ED0481C521DCF974003A0EA3 /* FlowDAO.swift in Sources */,
 				EDFF00EB21BE9B5D00CD9AED /* MainMenuViewController.swift in Sources */,
-				EDFFC42E21E4C4900085423E /* ComponentLayout.swift in Sources */,
 				ED38F50021BFE61100677F24 /* CategoryCell.swift in Sources */,
-				ED38F51421C3B6A300677F24 /* ButtonLayout.swift in Sources */,
+				EDFB7B7421E6331D00106AFD /* UIFlowImageView.swift in Sources */,
+				ED38F51421C3B6A300677F24 /* UIButtonLayout.swift in Sources */,
 				ED76248621D7F8EC00DB3D34 /* FieldBackgroundView.swift in Sources */,
+				ED76785D21EB64B10086B5F3 /* UserDAO.swift in Sources */,
+				ED76786021EB9C570086B5F3 /* SettingsViewController.swift in Sources */,
 				ED0481C921DD2195003A0EA3 /* TaskDAO.swift in Sources */,
 				ED90CF8B21CDA596004A95D7 /* ImagePickerManager.swift in Sources */,
 				ED0481CD21DFAE52003A0EA3 /* DBController.swift in Sources */,
+				EDFBB20921E8C8B5001F9D3D /* UICircularProgressBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

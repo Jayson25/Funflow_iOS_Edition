@@ -15,14 +15,14 @@ class ImagerPickerManager : NSObject, UIImagePickerControllerDelegate, UINavigat
     var alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
     var button : UIButton!
     var viewController : UIViewController?
-    var pickImageCallback : ((UIImage) -> ())?
+    var pickImageCallback : ((UIImage?) -> ())?
     
     init(_ button : UIButton){
         super.init()
         self.button = button
     }
     
-    func pickImage(_ viewController: UIViewController, _ callback: @escaping ((UIImage) -> ())){
+    func pickImage(_ viewController: UIViewController, _ callback: @escaping ((UIImage?) -> ())){
         pickImageCallback = callback
         self.viewController = viewController
         
@@ -36,6 +36,13 @@ class ImagerPickerManager : NSObject, UIImagePickerControllerDelegate, UINavigat
             self.openGallery()
         }
         
+        let emptyImage = UIAlertAction(title: "No image", style: .default){
+            action -> Void in
+            let image : UIImage? = nil
+            self.pickImageCallback!(image)
+            
+        }
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel){
             action -> Void in
         }
@@ -43,6 +50,7 @@ class ImagerPickerManager : NSObject, UIImagePickerControllerDelegate, UINavigat
         imgPicker.delegate = self
         alert.addAction(cameraAction)
         alert.addAction(galleryAction)
+        alert.addAction(emptyImage)
         alert.addAction(cancelAction)
         alert.popoverPresentationController?.sourceView = self.button
         alert.popoverPresentationController?.sourceRect = self.button.bounds

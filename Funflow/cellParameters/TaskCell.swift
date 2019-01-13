@@ -9,9 +9,19 @@
 import UIKit
 import BEMCheckBox
 
-class TaskCell: UITableViewCell, UITextViewDelegate, BEMCheckBoxDelegate{
+class TaskCell: UITableViewCell, UITextViewDelegate, BEMCheckBoxDelegate, UITextInputTraits{
     
-    var task : Task!
+    var task : Task!{
+        willSet(newValue){
+            self.checkbox.setOn(newValue.isDone, animated: true)
+            
+            let description = newValue.description
+            self.taskTextView.text = (description != nil && description != "") ? description : "tap here to edit"
+            self.taskTextView.font = UIFont(name: (self.taskTextView.font?.fontName)!, size: 15)
+        }
+    }
+    
+    
     var checkbox : BEMCheckBox!
     var taskTextView : UITextView!
     var isDone = false
@@ -51,8 +61,8 @@ class TaskCell: UITableViewCell, UITextViewDelegate, BEMCheckBoxDelegate{
         self.taskTextView.delegate = self
         self.taskTextView.textContainer.maximumNumberOfLines = 1
         self.taskTextView.isScrollEnabled = false
-        
-        //self.checkbox.setOn(false, animated: true)
+        self.taskTextView.autocorrectionType = .default
+
         self.checkbox.onAnimationType = BEMAnimationType.stroke
         self.checkbox.offAnimationType = BEMAnimationType.stroke
         
@@ -151,6 +161,13 @@ class TaskCell: UITableViewCell, UITextViewDelegate, BEMCheckBoxDelegate{
             ])
     }
     
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        //selects all text when beginning editing
+        DispatchQueue.main.async {
+            self.taskTextView.selectAll(nil)
+        }
+    }
+    
     func textViewDidEndEditing(_ textView: UITextView) {
         self.task.description = textView.text
     }
@@ -159,3 +176,4 @@ class TaskCell: UITableViewCell, UITextViewDelegate, BEMCheckBoxDelegate{
         self.task.isDone = checkbox.on
     }
 }
+

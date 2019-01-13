@@ -47,4 +47,19 @@ class TaskDAO{
         let tasks = taskTable.filter(self.flowID == flowID)
         try dbConnector.run(tasks.delete())
     }
+    
+    func select(flowID: Int) throws -> [Task]{
+        let tasks = taskTable.filter(self.flowID == flowID)
+        var listOfTasks = [Task]()
+        
+        for taskProperties in try dbConnector.prepare(tasks){
+            let task = Task(flowID: taskProperties[self.flowID],
+                            description: taskProperties[self.description],
+                            isDone: taskProperties[self.isDone])
+            
+            listOfTasks.append(task)
+        }
+        
+        return listOfTasks
+    }
 }
