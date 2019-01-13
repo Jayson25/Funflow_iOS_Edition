@@ -21,7 +21,6 @@ class TaskCell: UITableViewCell, UITextViewDelegate, BEMCheckBoxDelegate, UIText
         }
     }
     
-    
     var checkbox : BEMCheckBox!
     var taskTextView : UITextView!
     var isDone = false
