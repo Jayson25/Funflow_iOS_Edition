@@ -13,4 +13,4 @@ Yes, this app requires a password to unlock. The password store is in AES with r
 Sure, as long as the fun flow, you are free ask anything (as long it is not cringy or anything like that).
 Which platform supports this wonderful app?
 
-At the moment, only Android and iOS support the app. Maybe in the future, more platforms will be supported
+At the moment, the layout of this app is compatible iPad only. We might add a new layout for the iphone when the time comes
