@@ -9,12 +9,15 @@
 import UIKit
 import SQLite
 
-class FlowFormViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
+class FlowFormViewController: Observable, UIPickerViewDelegate, UIPickerViewDataSource {
 
     fileprivate var imagePath : String!
     let dateFormatter: DateFormatter = DateFormatter()
     
     var dbController : DBController!
+    var flow : Flow! = Flow()
+    
+    
     
     //labels for form
     @IBOutlet weak var titleFieldLabel: UIFieldLabel!
@@ -61,6 +64,8 @@ class FlowFormViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.flow.image = ""
         
         self.errorAlert = UIAlertController(title: "Error", message: nil, preferredStyle: .alert)
         self.errorAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -68,7 +73,7 @@ class FlowFormViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         self.successAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         
         self.formContentView.backgroundColor = GenericSettings.backgroundColor
-        self.taskTableDelegate = UITaskTableDelegate(self, self.tasks)
+        self.taskTableDelegate = UITaskTableDelegate(pageView: self, tasks: [], tableView: self.taskTable)
         
         self.dateFormatter.dateStyle = DateFormatter.Style.medium
         self.dateFormatter.timeStyle = DateFormatter.Style.none
@@ -76,8 +81,6 @@ class FlowFormViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         self.descriptionAreaEdit.text = ""
         self.descriptionAreaEdit.layer.cornerRadius = GenericSettings.genericCornerRadius
         
-        self.taskTable.delegate = self.taskTableDelegate
-        self.taskTable.dataSource = self.taskTableDelegate
         self.taskTable.tableFooterView = UIView(frame: .zero)
         self.taskTable.setupEmptyBackgroundView()
         
@@ -100,6 +103,29 @@ class FlowFormViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         catch let error{
             print("\(error)")
         }
+        
+        if (self.flow.id != nil){
+            self.titleField?.text = self.flow.title
+            self.categoryField?.text = self.flow.category
+            self.authorField?.text = self.flow.author
+            self.releaseDateField?.text = self.flow.releaseDate
+            self.starRatingEdit.rating = Double(self.flow.rating)
+            self.descriptionAreaEdit?.text = self.flow.description
+            
+            self.profileFrame.imageView?.image = self.flow.uiImage
+            self.profileFrame.updateBackground()
+            
+            do{
+                self.taskTableDelegate!.tasks = try self.dbController.taskDAO.select(flowID: self.flow.id)
+            }
+            
+            catch{
+                print("could not retrieve tasks: ", error)
+            }
+        }
+        
+        self.taskTable.delegate = self.taskTableDelegate
+        self.taskTable.dataSource = self.taskTableDelegate
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -125,6 +151,12 @@ class FlowFormViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBAction func releaseDateEditing(_ sender: UITextField) {
         let datePickerView : UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePicker.Mode.date
+
+        guard let date = self.dateFormatter.date(from: (self.releaseDateField?.text)!) else {
+            fatalError()
+        }
+        
+        datePickerView.date = date
         sender.inputView = datePickerView
         
         datePickerView.addTarget(self, action: #selector(datePickerValueChanged), for: UIControl.Event.valueChanged)
@@ -134,6 +166,10 @@ class FlowFormViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         let pickerView = UIPickerView()
         pickerView.delegate = self
         pickerView.dataSource = self
+        
+        let index = GenericSettings.categories.filter {$0.value.keys.contains(self.categoryField.text!)}.first?.key
+        pickerView.selectRow(index!, inComponent: 0, animated: false)
+        
         sender.inputView = pickerView
     }
     
@@ -149,32 +185,30 @@ class FlowFormViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     @IBAction func addTaskAction(_ sender: UIButton) {
-        taskTable.beginUpdates()
-        self.taskTableDelegate!.tasks.append(Task())
-        let indexPath = IndexPath(row: self.taskTableDelegate!.tasks.count-1, section: 0)
-        taskTable.insertRows(at: [indexPath], with: .automatic)
-        taskTable.endUpdates()
+        self.taskTableDelegate?.addTask()
     }
     
-    @IBAction func saveFlowAction(_ sender: Any) { 
-        let title : String = self.titleField.text!
-        let category : String = self.categoryField.text!
-        let author : String = self.authorField.text!
-        let releaseDate : String = self.releaseDateField.text!
-        let description : String = self.descriptionAreaEdit.text!
-        let rating : Int = Int(self.starRatingEdit.rating)
+    @IBAction func saveFlowAction(_ sender: Any) {
+        self.flow.title = self.titleField.text
+        self.flow.category = self.categoryField.text
+        self.flow.author = self.authorField.text
+        self.flow.releaseDate = self.releaseDateField.text
+        self.flow.description = self.descriptionAreaEdit.text
+        self.flow.rating = Int(self.starRatingEdit.rating)
         
-        let flow : Flow = Flow(title: title, image: "", category: category, author: author, releaseDate: releaseDate, rating: rating, description: description)
         let tasks : [Task] = self.taskTableDelegate!.tasks
         
         let documentFolder : URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let imgFolderPath : URL = documentFolder.appendingPathComponent("DCIM", isDirectory: true)
         var imageName : String?
+        var oldImage : String?
         var imagePath : URL?
         
+        print(self.flow.category)
+        
         //if a category is not assigned
-        guard GenericSettings.categories.enumerated().first(where: {$0.element.value.first?.key == category}) != nil else {
-            self.errorAlert.message = (category != "" ? category : "<CATEGORY_NOT_INITIALIZED>")  + " is not a valid category"
+        guard GenericSettings.categories.enumerated().first(where: {$0.element.value.first?.key == self.flow.category}) != nil else {
+            self.errorAlert.message = (self.flow.category != "" ? self.flow.category : "<CATEGORY_NOT_INITIALIZED>")  + " is not a valid category"
             present(self.errorAlert, animated: true, completion: nil)
             return
         }
@@ -189,7 +223,8 @@ class FlowFormViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                 let letters = "abcdefghijklmonpqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
                 imageName = String((0...20).map{_ in letters.randomElement()!}) + ".jpg"
                 imagePath = imgFolderPath.appendingPathComponent(imageName!, isDirectory: false)
-                flow.image = imageName
+                oldImage = self.flow?.image
+                self.flow.image = imageName
             }
                 
             catch let error {
@@ -200,11 +235,28 @@ class FlowFormViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         //saving the flow the database
         do {
-            try self.dbController.addFlow(flow: flow, tasks: tasks)
+            if (self.flow.id == nil){
+                try self.dbController.addFlow(flow: self.flow, tasks: tasks)
+            }
+            
+            else{
+                try self.dbController.flowDAO.update(flow: self.flow)
+                
+                for task in tasks{
+                    if (task.id != nil){
+                        try self.dbController.taskDAO.update(task.id, description: task.description, isDone: task.isDone)
+                    }
+                    
+                    else{
+                        task.flowID = self.flow.id
+                        try self.dbController.taskDAO.insert(task: task)
+                    }
+                }
+            }
         }
         
         catch let Result.error(message, code, _) where code == SQLITE_CONSTRAINT {
-            if (message.contains("UNIQUE")) {  self.errorAlert.message = flow.title + " already exists" }
+            if (message.contains("UNIQUE")) {  self.errorAlert.message = self.flow.title + " already exists" }
             present(self.errorAlert, animated: true, completion: nil)
         }
         
@@ -219,6 +271,18 @@ class FlowFormViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             if let jpg = GenericSettings.fixOrientation(img: image!)!.jpegData(compressionQuality: 1.0) {
                 do {
                     try jpg.write(to: imagePath!)
+                    
+                    if (oldImage != nil && oldImage != ""){
+                        let oldImagePath : URL = imgFolderPath.appendingPathComponent(oldImage!, isDirectory: false)
+                        
+                        do{
+                            try FileManager.default.removeItem(at: oldImagePath)
+                        }
+                        
+                        catch{
+                            print("Could not remove old image")
+                        }
+                    }
                 }
                     
                 catch let error{
@@ -233,23 +297,35 @@ class FlowFormViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             }
         }
         
-        self.resetForm()
-        self.successAlert.message = flow.title + " has been saved"
-        present(self.successAlert, animated: true, completion: nil)
-        //self.resetForm()
+        if (self.flow.id != nil){
+            update(target: nil)
+            self.navigationController?.popViewController(animated: true)
+        }
+            
+        else{
+            self.resetForm()
+            self.successAlert.message =  self.flow.title + " has been saved"
+            self.present(self.successAlert, animated: true, completion: nil)
+        }
     }
     
     @IBAction func cancelFormAction(_ sender: Any) {
         let cancelAlert = UIAlertController(title: "Cancel", message: "Are you sure you want to cancel?", preferredStyle: .alert)
         
         cancelAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction!) in
-            self.resetForm()
-            self.successAlert.message =  "flow has been cancelled"
-            self.present(self.successAlert, animated: true, completion: nil)
+            
+            if (self.flow.id != nil){
+                self.navigationController?.popViewController(animated: true)
+            }
+            
+            else{
+                self.resetForm()
+                self.successAlert.message =  "flow has been cancelled"
+                self.present(self.successAlert, animated: true, completion: nil)
+            }
         }))
         
         cancelAlert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
-        
         present(cancelAlert, animated: true, completion: nil)
     }
     
@@ -271,6 +347,15 @@ class FlowFormViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         categoryField.text = GenericSettings.categories[row]?.first?.key
+    }
+    
+    func gotToPreviousPage(){
+        if (self.flow.id != nil){
+            print("the warudo")
+            DispatchQueue.main.async {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
     private func animateViewMoving(up : Bool, moveValue : CGFloat){

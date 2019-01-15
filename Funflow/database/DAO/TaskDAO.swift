@@ -15,6 +15,7 @@ class TaskDAO{
     private let flowDAO : FlowDAO!
     let taskTable = Table("Task")
     
+    let id = Expression<Int>("ID")
     let flowID = Expression<Int>("flowID")
     let description = Expression<String>("description")
     let isDone = Expression<Bool>("isDone")
@@ -25,7 +26,8 @@ class TaskDAO{
         self.dbConnector = dbConnector
         self.flowDAO = flowDAO
         
-        try dbConnector.run(taskTable.create(ifNotExists: true){ t in
+        try dbConnector.run(self.taskTable.create(ifNotExists: true){ t in
+            t.column(self.id, primaryKey: .autoincrement)
             t.column(self.flowID)
             t.column(self.description)
             t.column(self.isDone, defaultValue: false)
@@ -34,7 +36,7 @@ class TaskDAO{
     }
     
     func insert(task: Task) throws {
-        try dbConnector.run(taskTable.insert(
+        try dbConnector.run(self.taskTable.insert(
             self.flowID <- task.flowID,
             self.description <- task.description,
             self.isDone <- task.isDone
@@ -43,17 +45,23 @@ class TaskDAO{
         self.lastRowID = dbConnector.lastInsertRowid
     }
     
+    func delete(id : Int) throws {
+        let task = self.taskTable.filter(self.id == id)
+        try dbConnector.run(task.delete())
+    }
+    
     func delete(flowID : Int) throws {
-        let tasks = taskTable.filter(self.flowID == flowID)
+        let tasks = self.taskTable.filter(self.flowID == flowID)
         try dbConnector.run(tasks.delete())
     }
     
     func select(flowID: Int) throws -> [Task]{
-        let tasks = taskTable.filter(self.flowID == flowID)
+        let tasks = self.taskTable.filter(self.flowID == flowID)
         var listOfTasks = [Task]()
         
         for taskProperties in try dbConnector.prepare(tasks){
-            let task = Task(flowID: taskProperties[self.flowID],
+            let task = Task(taskProperties[self.id],
+                            flowID: taskProperties[self.flowID],
                             description: taskProperties[self.description],
                             isDone: taskProperties[self.isDone])
             
@@ -61,5 +69,25 @@ class TaskDAO{
         }
         
         return listOfTasks
+    }
+    
+    func select(id: Int) throws -> Task{
+        let task = self.taskTable.filter(self.id == id)
+        
+        for taskProperties in try dbConnector.prepare(task){
+            return Task(taskProperties[self.id],
+                        flowID: taskProperties[self.flowID],
+                        description: taskProperties[self.description],
+                        isDone: taskProperties[self.isDone])
+        }
+        
+        return Task()
+    }
+    
+    func update(_ id : Int, description desc : String, isDone : Bool) throws {
+        let task = self.taskTable.filter(self.id == id)
+        
+        try dbConnector.run(task.update(self.description <- desc))
+        try dbConnector.run(task.update(self.isDone <- isDone))
     }
 }

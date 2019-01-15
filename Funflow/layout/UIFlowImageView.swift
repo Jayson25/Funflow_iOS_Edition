@@ -138,10 +138,12 @@ class UIFlowImageView: UIView {
     func updateBackground(){
         if (self.imageView.image == nil) {
             self.backgroundView.isHidden = false
+            self.imageView.backgroundColor = .clear
         }
         
         else{
             self.backgroundView.isHidden = true
+            self.imageView.backgroundColor = UIColor(patternImage: self.imageView.image!)
         }
     }
 }

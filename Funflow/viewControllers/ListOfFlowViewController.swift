@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ListOfFlowViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
-    
+class ListOfFlowViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, GenericObserver {
+
     private let identifier = "flowCell"
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -42,7 +42,6 @@ class ListOfFlowViewController: UIViewController, UITableViewDataSource, UITable
             
         catch let error {
             print(error)
-            self.flows = []
         }
     }
     
@@ -64,42 +63,31 @@ class ListOfFlowViewController: UIViewController, UITableViewDataSource, UITable
         return self.flows.count
     }
 
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? FlowCell {
-            cell.backgroundColor = .clear
-            cell.flowImage.image = flows[indexPath.row].uiImage
             
-            if (cell.flowImage.image != nil){
-                cell.flowImage?.backgroundColor = UIColor(patternImage: flows[indexPath.row].uiImage!)
-            }
-            
-            else{
-                cell.flowImage?.backgroundColor = .gray
-            }
-            
-            cell.titleLabel?.text = (self.isSearching) ? self.filteredFlows[indexPath.row].title : self.flows[indexPath.row].title
-            cell.starRating.rating = Double(flows[indexPath.row].rating)
-            cell.progressBar.progress = flows[indexPath.row].progress
-            
+            cell.flow = isSearching ? filteredFlows[indexPath.row] : flows[indexPath.row]
             return cell
         }
         
         else{
-            print("oups")
             return UITableViewCell()
         }
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchBar.text == nil || searchBar.text == "" {
+        updateSearch()
+    }
+    
+    func updateSearch(){
+        if self.searchBar.text == nil || self.searchBar.text == "" {
             self.isSearching = false
             
             view.endEditing(true)
             
             self.flowsTable.reloadData()
         }
-        
+            
         else {
             self.isSearching = true
             
@@ -113,11 +101,24 @@ class ListOfFlowViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let flow = storyboard?.instantiateViewController(withIdentifier: "flowView") as! FlowViewController
         flow.flow = self.flows[indexPath.row]
+        flow.addObserver(observer: self)
         
         navigationController?.pushViewController(flow, animated: true)
     }
     
     @objc func handleCancel(){
         dismiss(animated: true, completion: nil)
+    }
+    
+    func notify(target: Any?) {
+        
+        do{
+            self.flows = try dbController.flowDAO.selectByCategory(category)
+            updateSearch()
+        }
+            
+        catch let error {
+            print(error)
+        }
     }
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 import LocalAuthentication
+import BEMCheckBox
 
 class LoginViewController: UIViewController {
     
@@ -19,7 +20,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var rePasswordLabel: UILabel!
     @IBOutlet weak var passwordField: UITextFieldLayout!
     @IBOutlet weak var rePasswordField: UITextFieldLayout!
-    
+    @IBOutlet weak var consentCheckbox: BEMCheckBox!
+
     private var dbController : DBController!
     var isUserSetup : Bool!
     
@@ -53,6 +55,9 @@ class LoginViewController: UIViewController {
         self.passwordField.layer.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0).cgColor
         self.rePasswordField.layer.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0).cgColor
         
+        self.consentCheckbox.onAnimationType = BEMAnimationType.stroke
+        self.consentCheckbox.offAnimationType = BEMAnimationType.stroke
+        
         GenericSettings.applyLayout(forView: self.authButton)
         self.authButton.layer.borderColor = GenericSettings.themeColor.cgColor
         
@@ -64,6 +69,7 @@ class LoginViewController: UIViewController {
                 
                 self.rePasswordLabel.isHidden = true
                 self.rePasswordField.isHidden = true
+                
                 
                 if (try dbController.userDAO.isBiometrics()){
                     unlockBiometrics()
@@ -103,11 +109,16 @@ class LoginViewController: UIViewController {
         let regex = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$"
         if (self.passwordField.text?.range(of: regex, options: .regularExpression, range: nil, locale: nil) != nil){
             if (self.passwordField.text == self.rePasswordField.text){
-                try dbController.userDAO.insert(forPwd: passwordField.text!)
+                if (consentCheckbox.on){
+                    try dbController.userDAO.insert(forPwd: passwordField.text!)
+                    self.successAlert.message = "Password created"
+                    self.present(self.successAlert, animated: true, completion: nil)
+                }
                 
-                print("finish")
-                self.successAlert.message = "Password created"
-                self.present(self.successAlert, animated: true, completion: nil)
+                else{
+                    self.errorAlert.message = "Please check the data consent checkbox"
+                    present(self.errorAlert, animated: true, completion: nil)
+                }
             }
             
             else{

@@ -9,6 +9,24 @@
 import UIKit
 
 class FlowCell: UITableViewCell {
+    var flow : Flow!{
+        willSet(newValue){
+            self.backgroundColor = .clear
+            self.flowImage.image = newValue.uiImage
+            
+            if (self.flowImage.image != nil){
+                self.flowImage?.backgroundColor = UIColor(patternImage: self.flowImage.image!)
+            }
+            
+            else{
+                self.flowImage?.backgroundColor = .gray
+            }
+            
+            self.titleLabel?.text = newValue.title
+            self.starRating.rating = Double(newValue.rating)
+            self.progressBar.progress = newValue.progress
+        }
+    }
     
     var flowImage : UIImageView!
     var titleLabel : UILabel!

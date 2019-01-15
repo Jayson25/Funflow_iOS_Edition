@@ -35,6 +35,8 @@ class Flow{
     var description : String!
     var progress : Float!
     
+    public init (){}
+    
     public init(_ id: Int, title: String, image: String, category: String, author: String, releaseDate: String, rating: Int, description: String){
         self._id = id
         self.title = title
@@ -59,7 +61,6 @@ class Flow{
         self.description = description
         
         updateUIImage(image)
-        updateProgress()
     }
     
     private func updateUIImage(_ image : String){

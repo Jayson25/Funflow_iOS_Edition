@@ -9,13 +9,14 @@
 import UIKit
 
 class Task{
-    private var _flowID : Int!
+    var hasID : Bool!
     
-    var flowID : Int!{
-        get{
-            return self._flowID
+    var id : Int!{
+        willSet(newValue){
+            self.hasID = (newValue != nil) ? true : false
         }
     }
+    var flowID : Int!
     
     var description : String!
     var isDone : Bool!
@@ -23,11 +24,24 @@ class Task{
     public init(){
         self.description = ""
         self.isDone = false
+        
+        self.hasID = false
+    }
+    
+    public init(_ id: Int, flowID : Int, description : String, isDone : Bool){
+        self.id = id
+        self.flowID = flowID
+        self.description = description
+        self.isDone = isDone
+        
+        self.hasID = true
     }
     
     public init(flowID : Int, description : String, isDone : Bool){
-        self._flowID = flowID
+        self.flowID = flowID
         self.description = description
         self.isDone = isDone
+        
+        self.hasID = false
     }
 }

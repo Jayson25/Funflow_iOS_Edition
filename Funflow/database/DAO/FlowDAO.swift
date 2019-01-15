@@ -147,15 +147,23 @@ class FlowDAO{
     
     func delete(id : Int) throws {
         let flow = flowTable.filter(self.id == id)
+        let image = (try selectByID(id)).image
         try dbConnector.run(flow.delete())
+        
+        if (image != nil && image != ""){
+            let documentFolder : URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            let imgPath : URL = documentFolder.appendingPathComponent("DCIM", isDirectory: true).appendingPathComponent(image!, isDirectory: false)
+            
+            try FileManager.default.removeItem(at: imgPath)
+        }
     }
     
     func deleteAll() throws {
         try dbConnector.run(flowTable.delete())
     }
     
-    func update(_ id : Int, flow: Flow) throws {
-        let flowQuery = flowTable.filter(self.id == id)
+    func update(flow: Flow) throws {
+        let flowQuery = flowTable.filter(self.id == flow.id)
         
         try dbConnector.run(flowQuery.update(self.title <- flow.title))
         try dbConnector.run(flowQuery.update(self.image <- flow.image))

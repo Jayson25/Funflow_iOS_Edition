@@ -9,7 +9,29 @@
 import UIKit
 import BEMCheckBox
 
-class TaskCell: UITableViewCell, UITextViewDelegate, BEMCheckBoxDelegate, UITextInputTraits{
+class CellObservable : UITableViewCell, GenericObservable{
+    var observers = [GenericObserver]()
+    
+    func addObserver(observer: GenericObserver) {
+        print("adding observer")
+        observers.append(observer)
+    }
+    
+    func removeObserver(observer: GenericObserver) {
+        print("removing observer")
+        observers.remove(at: observers.firstIndex(where: {  $0 === observer })!)
+    }
+    
+    func update(target: Any?){
+        for obs in observers {
+            obs.notify(target: target)
+        }
+    }
+}
+
+class TaskCell: CellObservable, UITextViewDelegate, BEMCheckBoxDelegate, UITextInputTraits {
+    
+    var progressView : UICircularProgressBar?
     
     var task : Task!{
         willSet(newValue){
@@ -169,10 +191,30 @@ class TaskCell: UITableViewCell, UITextViewDelegate, BEMCheckBoxDelegate, UIText
     
     func textViewDidEndEditing(_ textView: UITextView) {
         self.task.description = textView.text
+        updateTask()
     }
     
     func animationDidStop(for checkBox: BEMCheckBox) {
         self.task.isDone = checkbox.on
+        updateTask()
+    }
+    
+    private func updateTask(){
+        if (self.task.hasID){
+            do{
+                let dbController = try DBController()
+                try dbController.taskDAO.update(self.task.id, description: self.task.description, isDone: self.task.isDone)
+                
+                if (self.progressView != nil){
+                    let flow = try dbController.flowDAO.selectByID(self.task.flowID)
+                    self.progressView?.progress = flow.progress
+                    self.update(target: nil)
+                }
+            }
+            
+            catch{
+                print(error)
+            }
+        }
     }
 }
-
