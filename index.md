@@ -1,37 +1,24 @@
-## Welcome to GitHub Pages
+# Funflow
 
-You can use the [editor on GitHub](https://github.com/Jayson255/Funflow_iOS_Edition/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Welcome to the iOS Funflow. Page, here you will discover a new way on how to organize your entertainment. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Funflow is an app that allows you to go to make goals to your favorite entertainment content. You will never forget which boku no pico episode you left, nor forget the page number or chapter of your favorite twilight book. You can add games, book, TV series, movies, song album and much more to your list of fun, as we say, let the fun flow without any worries.
 
-### Markdown
+## How it started
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Funflow was born during a school project at the Université de Technologie de Troyes, where the project consists of create an app in iOS and Android that is secure and can save data. This project is a context to sharpen my coding style and learn new tools, especially the swift language with XCode. Also, we went far ahead to add more features than requested to explore further the technologies in class and being able to understand more the potentiality of the tools taught.
 
-```markdown
-Syntax highlighted code block
+Now that it is over, we might continue to improve the application and add other tools to make Funflow a better overall experience. 
 
-# Header 1
-## Header 2
-### Header 3
+## Is this app secure?
 
-- Bulleted
-- List
+Yes, this app requires a password to unlock. The password store is in AES with random generated iv value. For people who don't want a password, you still can use touchID on compatible devices. Funflow will never ask out of context data and your identity will remain anonymous, and you're protected under the RGPD legislation.
 
-1. Numbered
-2. List
+New features will come your way when it will be available and are trilling to share with your features.
 
-**Bold** and _Italic_ and `Code` text
+## What's next?
 
-[Link](url) and ![Image](src)
-```
+Since it is a school project, a lot of improvements needs to be made in order to make a sturdy and commercial ready app. Don't hesitate to contribute the development of the app since if we are many, lots of wonderful things can be made, and that's the beauty of community driven project.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Jayson255/Funflow_iOS_Edition/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Best regards to all,
+Jayson
