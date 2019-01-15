@@ -79,10 +79,10 @@ class FlowViewController: Observable, GenericObserver {
         self.editFlowButton.addTarget(self, action: #selector(editFlow), for: .touchUpInside)
 
         fillFields()
-        
-        for obs in self.observers{
-            self.taskTableDelegate?.addObserver(observer: obs)
-        }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        self.update(target: nil)
     }
     
     func fillFields(){

@@ -21,7 +21,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextFieldLayout!
     @IBOutlet weak var rePasswordField: UITextFieldLayout!
     @IBOutlet weak var consentCheckbox: BEMCheckBox!
-
+    @IBOutlet weak var consentRGPDLabel: UILabel!
+    
     private var dbController : DBController!
     var isUserSetup : Bool!
     
@@ -69,7 +70,8 @@ class LoginViewController: UIViewController {
                 
                 self.rePasswordLabel.isHidden = true
                 self.rePasswordField.isHidden = true
-                
+                self.consentCheckbox.isHidden = true
+                self.consentRGPDLabel.isHidden = true
                 
                 if (try dbController.userDAO.isBiometrics()){
                     unlockBiometrics()

@@ -136,6 +136,7 @@
                         <outlet property="authButton" destination="9ke-Re-Lxh" id="DCF-rb-kCq"/>
                         <outlet property="backgroundImage" destination="OCc-lZ-GNX" id="lal-Yp-ni5"/>
                         <outlet property="consentCheckbox" destination="sMe-hs-Mj9" id="ho3-cN-hUJ"/>
+                        <outlet property="consentRGPDLabel" destination="gC3-gp-GS3" id="Y5o-7f-Let"/>
                         <outlet property="loginView" destination="8dq-eO-3X3" id="PjL-xz-bB5"/>
                         <outlet property="mainTitle" destination="9IW-Uj-KBz" id="c6f-k2-f2C"/>
                         <outlet property="passwordField" destination="mxC-J1-EIX" id="YA6-hX-jZq"/>

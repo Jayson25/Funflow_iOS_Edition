@@ -9,27 +9,7 @@
 import UIKit
 import BEMCheckBox
 
-class CellObservable : UITableViewCell, GenericObservable{
-    var observers = [GenericObserver]()
-    
-    func addObserver(observer: GenericObserver) {
-        print("adding observer")
-        observers.append(observer)
-    }
-    
-    func removeObserver(observer: GenericObserver) {
-        print("removing observer")
-        observers.remove(at: observers.firstIndex(where: {  $0 === observer })!)
-    }
-    
-    func update(target: Any?){
-        for obs in observers {
-            obs.notify(target: target)
-        }
-    }
-}
-
-class TaskCell: CellObservable, UITextViewDelegate, BEMCheckBoxDelegate, UITextInputTraits {
+class TaskCell: UITableViewCell, UITextViewDelegate, BEMCheckBoxDelegate, UITextInputTraits {
     
     var progressView : UICircularProgressBar?
     
@@ -208,7 +188,6 @@ class TaskCell: CellObservable, UITextViewDelegate, BEMCheckBoxDelegate, UITextI
                 if (self.progressView != nil){
                     let flow = try dbController.flowDAO.selectByID(self.task.flowID)
                     self.progressView?.progress = flow.progress
-                    self.update(target: nil)
                 }
             }
             

@@ -10,19 +10,7 @@ import Foundation
 import UIKit
 import BEMCheckBox
 
-class UITaskTableDelegate : NSObject, UITableViewDelegate, UITableViewDataSource, BEMCheckBoxDelegate, UITextViewDelegate, UITextInputTraits, GenericObservable{
-    
-    var observers = [GenericObserver]()
-    
-    func addObserver(observer: GenericObserver) {
-        print("adding observer")
-        observers.append(observer)
-    }
-    
-    func removeObserver(observer: GenericObserver) {
-        print("removing observer")
-        observers.remove(at: observers.firstIndex(where: {  $0 === observer })!)
-    }
+class UITaskTableDelegate : NSObject, UITableViewDelegate, UITableViewDataSource, BEMCheckBoxDelegate, UITextViewDelegate, UITextInputTraits {
     
     var pageView : UIViewController!
     var addButton : UIButton!
@@ -68,10 +56,6 @@ class UITaskTableDelegate : NSObject, UITableViewDelegate, UITableViewDataSource
         cell.task = self.tasks[indexPath.row]
         if (self.progressView != nil){
             cell.progressView = self.progressView
-        }
-        
-        for obs in self.observers{
-            cell.addObserver(observer: obs)
         }
         
         return cell
